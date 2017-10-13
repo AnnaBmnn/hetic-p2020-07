@@ -29,5 +29,6 @@
   },
   "dependencies": {
     "gulp-if": "^2.0.2"
-  }
+  },
+  "repository": "https://github.com/AnnaBmnn/hetic-p2020-07.git"
 }
