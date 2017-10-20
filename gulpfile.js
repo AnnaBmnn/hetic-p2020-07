@@ -13,8 +13,16 @@ var source = require('vinyl-source-stream');
 var sourcemaps = require('gulp-sourcemaps');
 var sync = require('browser-sync').create();
 var uglify = require('gulp-uglify');
-
+var postcss = require('gulp-postcss');
+var autoprefixer = require('autoprefixer');
+var pxtorem = require('postcss-pxtorem');
+var options = {
+    propList: ['*'],
+    fallback: true,
+};
+var processors = [autoprefixer, pxtorem(options)];
 var isProd = process.env.NODE_ENV === 'production';
+
 
 /**
  * PUG
@@ -30,11 +38,12 @@ function templates() {
 /**
  * SCSS
  */
-
+/* .pipe(postcss(processors))*/
 function scss() {
   return gulp.src('src/scss/styles.scss')
     .pipe(gulpif(!isProd, sourcemaps.init()))
     .pipe(sass())
+    .pipe(postcss(processors))
     .pipe(gulpif(isProd, minifyCSS()))
     .pipe(gulpif(!isProd, sourcemaps.write('.')))
     .pipe(gulp.dest('dist/css'))
@@ -73,7 +82,7 @@ function images() {
  */
 
 function fonts() {
-  return gulp.src('src/fonts/**/*')
+  return gulp.src('src/fonts/*')
     .pipe(gulp.dest('dist/fonts'));
 }
 
