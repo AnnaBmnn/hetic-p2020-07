@@ -1,5 +1,5 @@
 var babelify = require('babelify');
-var browserify = require('browserify')
+var browserify = require('browserify');
 var buffer = require('vinyl-buffer');
 var concat = require('gulp-concat');
 var del = require('del');
@@ -55,17 +55,16 @@ function scss() {
  */
 
 function js() {
-  return browserify({entries: ['src/js/script.js'], debug: true})
+  return browserify({entries: ['src/js/script.js', 'src/js/scroll.js'], debug: true})
     .transform(babelify, {presets: 'es2015'})
     .bundle()
     .pipe(source('script.js'))
     .pipe(buffer())
     .pipe(gulpif(!isProd, sourcemaps.init({loadMaps: true})))
-    .pipe(uglify())
     .pipe(gulpif(!isProd, sourcemaps.write('.')))
     .pipe(gulp.dest('dist/js'))
     .pipe(sync.stream());
-};
+}
 
 /**
  * IMAGES
