@@ -1,28 +1,49 @@
-let theDiv      = document.getElementById('wrapper');
-let clientWidth = document.getElementById('body').clientWidth;
+"use strict";
+
+let OSName="Unknown OS";
+if (navigator.appVersion.indexOf("Win")  !== -1) {
+    OSName = "Windows";
+}  else if (navigator.appVersion.indexOf("Mac")  !== -1)
+{
+    OSName = "MacOS";
+}  else if (navigator.appVersion.indexOf("X11")  !== -1)
+{
+    OSName = "UNIX";
+} else if (navigator.appVersion.indexOf("Linux")!== -1)
+{
+    OSName = "Linux";
+}
+
+let theDiv      = document.getElementById("wrapper");
+let clientWidth = document.getElementById("body").clientWidth;
 
 let translateAllowed    = true;
 let actualPos           = 0;
 let maxTranslate        = theDiv.scrollWidth - clientWidth;
-let scrollSpeed         = 60;
 let xDown               = null;
 let yDown               = null;
 
+let scrollSpeed         = 60;
+if (OSName === "MacOS")
+{
+    scrollSpeed = 10;
+}
+
 /* EVENT LISTENERS */
 
-document.addEventListener('touchstart', handleTouchStart,   false);
-document.addEventListener('touchmove',  handleTouchMove,    false);
-document.addEventListener('wheel',      handleScroll,       true);
-document.addEventListener('resize',     handleResize,       true);
+document.addEventListener("touchstart", handleTouchStart,   false);
+document.addEventListener("touchmove",  handleTouchMove,    false);
+document.addEventListener("wheel",      handleScroll,       true) ;
+document.addEventListener("resize",     handleResize,       true) ;
 
 /* MOUVEMENTS */
 
 function goToLeft(varTrans, smooth = false) {
-    if (typeof varTrans !== 'undefined')
+    if (typeof varTrans !== "undefined")
     {
         actualPos += varTrans;
     } else {
-        actualPos += document.getElementById('body').clientWidth;
+        actualPos += document.getElementById("body").clientWidth;
     }
     if ( actualPos < 0)
     {
@@ -41,11 +62,11 @@ function goToLeft(varTrans, smooth = false) {
 }
 
 function goToRight(varTrans, smooth = false) {
-    if (typeof varTrans !== 'undefined')
+    if (typeof varTrans !== "undefined")
     {
         actualPos += varTrans;
     } else {
-        actualPos -= document.getElementById('body').clientWidth;
+        actualPos -= document.getElementById("body").clientWidth;
     }
     if ( actualPos < 0)
     {
@@ -67,7 +88,9 @@ function goToRight(varTrans, smooth = false) {
 
 async function handleScroll(e) {
     e.preventDefault();
-    if (!translateAllowed) {return; }
+    if (!translateAllowed) {
+        return;
+    }
     translateAllowed = false;
     if (( actualPos >= 0 ) && (( e.deltaY > 0 ) || (e.deltaX > 0)))
     {
@@ -134,9 +157,9 @@ async function handleTouchMove(e) {
 
 /* HANDLE RESIZE */
 
-async function handleResize(e) {
+async function handleResize() {
     await sleep(500);
-    maxTranslate = document.getElementById('wrapper').scrollWidth - document.getElementById('body').clientWidth;
+    maxTranslate = document.getElementById("wrapper").scrollWidth - document.getElementById("body").clientWidth;
     if ( actualPos < 0)
     {
         actualPos = 0;
