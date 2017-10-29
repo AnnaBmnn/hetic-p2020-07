@@ -1,12 +1,71 @@
-let theDiv  = document.getElementById('wrapper');
+let theDiv      = document.getElementById('wrapper');
+let clientWidth = document.getElementById('body').clientWidth;
 
+let translateAllowed    = true;
+let actualPos           = 0;
+let maxTranslate        = theDiv.scrollWidth - clientWidth;
+let scrollSpeed         = 60;
+let xDown               = null;
+let yDown               = null;
 
-let translateAllowed = true;
-let actualPos = 0;
-let maxTranslate = theDiv.scrollWidth - document.getElementById('body').clientWidth;
-let scrollSpeed = 50;
+/* EVENT LISTENERS */
 
-window.addEventListener('wheel', async function(e){
+document.addEventListener('touchstart', handleTouchStart,   false);
+document.addEventListener('touchmove',  handleTouchMove,    false);
+document.addEventListener('wheel',      handleScroll,       true);
+document.addEventListener('resize',     handleResize,       true);
+
+/* MOUVEMENTS */
+
+function goToLeft(varTrans, smooth = false) {
+    if (typeof varTrans !== 'undefined')
+    {
+        actualPos += varTrans;
+    } else {
+        actualPos += document.getElementById('body').clientWidth;
+    }
+    if ( actualPos < 0)
+    {
+        actualPos = 0;
+    } else if (actualPos > maxTranslate )
+    {
+        actualPos = maxTranslate;
+    }
+    if (smooth)
+    {
+        theDiv.style.transition = "all 0.3s ease";
+    } else {
+        theDiv.style.transition = "";
+    }
+    theDiv.style.transform  = "translateX(-" + actualPos + "px)";
+}
+
+function goToRight(varTrans, smooth = false) {
+    if (typeof varTrans !== 'undefined')
+    {
+        actualPos += varTrans;
+    } else {
+        actualPos -= document.getElementById('body').clientWidth;
+    }
+    if ( actualPos < 0)
+    {
+        actualPos = 0;
+    } else if (actualPos > maxTranslate )
+    {
+        actualPos = maxTranslate;
+    }
+    if (smooth)
+    {
+        theDiv.style.transition = "all 0.3s ease";
+    } else {
+        theDiv.style.transition = "";
+    }
+    theDiv.style.transform  = "translateX(-" + actualPos + "px)";
+}
+
+/* HANDLE SCROLL */
+
+async function handleScroll(e) {
     e.preventDefault();
     if (!translateAllowed) {return; }
     translateAllowed = false;
@@ -29,19 +88,13 @@ window.addEventListener('wheel', async function(e){
     }
     await sleep(100);
     translateAllowed = true;
-}, true);
-
+}
 
 /* HANDLE TOUCH */
-document.addEventListener('touchstart', handleTouchStart, false);
-document.addEventListener('touchmove',  handleTouchMove, false);
 
-let xDown = null;
-let yDown = null;
-
-function handleTouchStart(event) {
-    xDown = event.touches[0].clientX;
-    yDown = event.touches[0].clientY;
+function handleTouchStart(e) {
+    xDown = e.touches[0].clientX;
+    yDown = e.touches[0].clientY;
 }
 
 async function handleTouchMove(e) {
@@ -55,7 +108,7 @@ async function handleTouchMove(e) {
     let xDiff = xDown - xUp;
     let yDiff = yDown - yUp;
 
-    if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
+    if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) { /*most significant*/
         translateAllowed = false;
         if ( xDiff > 0 ) {
             /* left swipe */
@@ -79,55 +132,9 @@ async function handleTouchMove(e) {
     translateAllowed = true;
 }
 
-function goToLeft(varTrans, smooth = false)
-{
-    if (typeof varTrans !== 'undefined')
-    {
-        actualPos += varTrans;
-    } else {
-        actualPos += document.getElementById('body').clientWidth;
-    }
-    if ( actualPos < 0)
-    {
-        actualPos = 0;
-    } else if (actualPos > maxTranslate )
-    {
-        actualPos = maxTranslate;
-    }
-    if (smooth)
-    {
-        theDiv.style.transition = "all 0.3s ease";
-    } else {
-        theDiv.style.transition = "";
-    }
-    theDiv.style.transform  = "translateX(-" + actualPos + "px)";
-}
+/* HANDLE RESIZE */
 
-function goToRight(varTrans, smooth = false)
-{
-    if (typeof varTrans !== 'undefined')
-    {
-        actualPos += varTrans;
-    } else {
-        actualPos -= document.getElementById('body').clientWidth;
-    }
-    if ( actualPos < 0)
-    {
-        actualPos = 0;
-    } else if (actualPos > maxTranslate )
-    {
-        actualPos = maxTranslate;
-    }
-    if (smooth)
-    {
-        theDiv.style.transition = "all 0.3s ease";
-    } else {
-        theDiv.style.transition = "";
-    }
-    theDiv.style.transform  = "translateX(-" + actualPos + "px)";
-}
-
-window.onresize = async function () {
+async function handleResize(e) {
     await sleep(500);
     maxTranslate = document.getElementById('wrapper').scrollWidth - document.getElementById('body').clientWidth;
     if ( actualPos < 0)
@@ -139,8 +146,9 @@ window.onresize = async function () {
         actualPos = maxTranslate;
         theDiv.style.transform = "translateX(-" + actualPos + "px)";
     }
-};
+}
 
+/* SLEEP */
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }

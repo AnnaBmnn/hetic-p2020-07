@@ -1,27 +1,27 @@
-var babelify = require('babelify');
-var browserify = require('browserify');
-var buffer = require('vinyl-buffer');
-var concat = require('gulp-concat');
-var del = require('del');
-var gulp = require('gulp');
-var imagemin = require('gulp-imagemin');
-var gulpif = require('gulp-if');
-var minifyCSS = require('gulp-csso');
-var pug = require('gulp-pug');
-var sass = require('gulp-sass');
-var source = require('vinyl-source-stream');
-var sourcemaps = require('gulp-sourcemaps');
-var sync = require('browser-sync').create();
-var uglify = require('gulp-uglify');
-var postcss = require('gulp-postcss');
-var autoprefixer = require('autoprefixer');
-var pxtorem = require('postcss-pxtorem');
-var options = {
+let babelify = require('babelify');
+let browserify = require('browserify');
+let buffer = require('vinyl-buffer');
+let concat = require('gulp-concat');
+let del = require('del');
+let gulp = require('gulp');
+let imagemin = require('gulp-imagemin');
+let gulpif = require('gulp-if');
+let minifyCSS = require('gulp-csso');
+let pug = require('gulp-pug');
+let sass = require('gulp-sass');
+let source = require('vinyl-source-stream');
+let sourcemaps = require('gulp-sourcemaps');
+let sync = require('browser-sync').create();
+let uglify = require('gulp-uglify');
+let postcss = require('gulp-postcss');
+let autoprefixer = require('autoprefixer');
+let pxtorem = require('postcss-pxtorem');
+let options = {
     propList: ['*'],
     fallback: true,
 };
-var processors = [autoprefixer, pxtorem(options)];
-var isProd = process.env.NODE_ENV === 'production';
+let processors = [autoprefixer, pxtorem(options)];
+let isProd = process.env.NODE_ENV === 'production';
 
 
 /**
