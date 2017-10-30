@@ -32,7 +32,6 @@ body {
     transform: rotate(90deg) translateY(-100vh);
     transform-origin: top left;
 }
-
 .home__wrapper {
     background-color: #45ccff;
 }
@@ -71,8 +70,148 @@ body {
 }
 
 .two {
-  background-color: #49e83e;
+  background-color: #fff;
 }
+
+/****************************************
+BULLES
+*******************************************/
+
+.buble {
+    position: absolute;
+    animation: move 25s linear infinite;
+    opacity: 0;
+}
+
+.buble__size1{
+    width: 20px;
+}
+
+.buble__size2{
+    width: 15px;
+}
+
+.buble__size3{
+    width: 22px;
+}
+
+/* TODO: FIX Bubble position */
+.buble:nth-of-type(3n + 1) { margin-left: 75px; }
+
+.buble:nth-of-type(5n + 1) { animation-delay: 0s; animation-duration: 26s; margin-left: 20em;}
+.buble:nth-of-type(5n + 2) { animation-delay: 0s; animation-duration: 29s; margin-left: 75em;}
+.buble:nth-of-type(5n + 3) { animation-delay: 0s; animation-duration: 20s; margin-left: 35em;}
+.buble:nth-of-type(5n + 4) { animation-delay: 0s; animation-duration: 24s; margin-left: 120em;}
+.buble:nth-of-type(5n + 5) { animation-delay: 0s }
+.buble:nth-of-type(5n + 6) { animation-delay: 0s; animation-duration: 26s; margin-left: 20em;}
+.buble:nth-of-type(5n + 7) { animation-delay: 0s; animation-duration: 28s; margin-left: 70em;}
+.buble:nth-of-type(5n + 8) { animation-delay: 0s; animation-duration: 13s; margin-left: 39em;}
+.buble:nth-of-type(5n + 9) { animation-delay: 0s; animation-duration: 26s; margin-left: 120em;}
+.buble:nth-of-type(5n + 10) { animation-delay: 5s }
+
+.buble:nth-of-type(5n + 11) { animation-delay: 0s; animation-duration: 12s; margin-left: 10em;}
+.buble:nth-of-type(5n + 12) { animation-delay: 0s; animation-duration: 18s; margin-left: 20em;}
+.buble:nth-of-type(5n + 13) { animation-delay: 0s; animation-duration: 21s; margin-left: 60em;}
+.buble:nth-of-type(5n + 14) { animation-delay: 0s; animation-duration: 22s; margin-left: 125em;}
+.buble:nth-of-type(5n + 15) { animation-delay: 0s }
+.buble:nth-of-type(5n + 16) { animation-delay: 0s; animation-duration: 24s; margin-left: 110em;}
+.buble:nth-of-type(5n + 17) { animation-delay: 0s; animation-duration: 18s; margin-left: 75em;}
+.buble:nth-of-type(5n + 18) { animation-delay: 0s; animation-duration: 15s; margin-left: 90em;}
+.buble:nth-of-type(5n + 19) { animation-delay: 8s; animation-duration: 26s; margin-left: 95em;}
+.buble:nth-of-type(5n + 20) { animation-delay: 5s }
+
+.buble:nth-of-type(5n + 21) { animation-delay: 1s; animation-duration: 15s; margin-left: 130em;}
+.buble:nth-of-type(5n + 22) { animation-delay: 2s; animation-duration: 18s; margin-left: 150em;}
+.buble:nth-of-type(5n + 23) { animation-delay: 0s; animation-duration: 20s; margin-left: 125em;}
+.buble:nth-of-type(5n + 24) { animation-delay: 0s; animation-duration: 22s; margin-left: 110em;}
+.buble:nth-of-type(5n + 25) { animation-delay: 5s }
+.buble:nth-of-type(5n + 26) { animation-delay: 0s; animation-duration: 26s; margin-left: 200em;}
+.buble:nth-of-type(5n + 27) { animation-delay: 0s; animation-duration: 17s; margin-left: 180em;}
+.buble:nth-of-type(5n + 28) { animation-delay: 0s; animation-duration: 15s; margin-left: 165em;}
+.buble:nth-of-type(5n + 29) { animation-delay: 0s; animation-duration: 26s; margin-left: 100em;}
+.buble:nth-of-type(5n + 30) { animation-delay: 0s }
+
+.buble:nth-of-type(5n + 31) { animation-delay: 0s; animation-duration: 16s; margin-left: 220em;}
+.buble:nth-of-type(5n + 32) { animation-delay: 0s; animation-duration: 15s; margin-left: 275em;}
+.buble:nth-of-type(5n + 33) { animation-delay: 0s; animation-duration: 6s; margin-left: 235em;}
+.buble:nth-of-type(5n + 34) { animation-delay: 0s; animation-duration: 26s; margin-left: 2120em;}
+.buble:nth-of-type(5n + 35) { animation-delay: 0s }
+.buble:nth-of-type(5n + 36) { animation-delay: 0s; animation-duration: 26s; margin-left: 220em;}
+.buble:nth-of-type(5n + 37) { animation-delay: 0s; animation-duration: 114s; margin-left: 270em;}
+.buble:nth-of-type(5n + 38) { animation-delay: 0s; animation-duration: 10s; margin-left: 239em;}
+.buble:nth-of-type(5n + 39) { animation-delay: 0s; animation-duration: 26s; margin-left: 220em;}
+.buble:nth-of-type(5n +  40) { animation-delay: 5s }
+
+.buble::before {
+    content: "";
+    position: absolute;
+    bottom: -5%;
+    left: 20%;
+    margin-left: 50px;
+}
+
+.buble::after {
+    content: "";
+    position: absolute;
+    top: -20%;
+    left: 20%;
+
+}
+
+@keyframes move {
+    0% {
+        opacity: 1;
+        bottom: -100%;
+        left: 20%;
+    }
+    100% {
+        opacity: 1;
+        bottom: 100%;
+        left: 20%;
+    }
+}
+
+/****************************************
+PARFUM & NAME
+*******************************************/
+
+.presentation-parfum-blue__container{
+  position: relative;
+  height: 45em;
+  width: 100%;
+}
+
+.parfum-blue__container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 0px;
+  text-align: center;
+  z-index: 3;
+}
+
+.parfum-blue__name{
+  font-size: 7vh;
+  color: blue;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+.parfum-blue__image{
+  width: 50vw;
+  max-width: 600px;
+}
+
+
+
+
+
+
+
+
+
+
 
 .three {
   background-color: #edde05;

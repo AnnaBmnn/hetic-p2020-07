@@ -26,7 +26,7 @@ let yDown               = null;
 let scrollSpeed         = 60;
 if (OSName === "MacOS")
 {
-    scrollSpeed = 10;
+    scrollSpeed = 1;
 }
 
 /* EVENT LISTENERS */

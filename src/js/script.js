@@ -1,7 +1,7 @@
-import { User } from './user';
+import {User} from "./user";
 
-console.log('Welcome !');
+console.log("Welcome !");
 
-let name = 'Bastien';
+let name = "Bastien";
 const user = new User(name);
 
