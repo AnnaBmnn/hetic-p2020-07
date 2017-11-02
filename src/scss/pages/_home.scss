@@ -77,26 +77,25 @@ body {
 BULLES
 *******************************************/
 
-.buble {
+.bubble {
     position: absolute;
     animation: move 25s linear infinite;
     opacity: 0;
 }
 
-.buble__size1{
+.bubble__size1{
     width: 20px;
 }
 
-.buble__size2{
+.bubble__size2{
     width: 15px;
 }
 
-.buble__size3{
+.bubble__size3{
     width: 22px;
 }
 
-/* TODO: FIX Bubble position */
-.buble:nth-of-type(3n + 1) { margin-left: 75px; }
+.bubble:nth-of-type(3n + 1) { margin-left: 75px; }
 
 .bubble:nth-of-type(5n + 1) { animation-delay: 0s; animation-duration: 26s; margin-left: 20%;}
 .bubble:nth-of-type(5n + 2) { animation-delay: 0s; animation-duration: 29s; margin-left: 75%;}
@@ -142,7 +141,7 @@ BULLES
 .bubble:nth-of-type(5n + 39) { animation-delay: 0s; animation-duration: 26s; margin-left: 22%;}
 .bubble:nth-of-type(5n + 40) { animation-delay: 5s }
 
-.buble::before {
+.bubble::before {
     content: "";
     position: absolute;
     bottom: -5%;
@@ -182,8 +181,11 @@ PARFUM & NAME BLUE
 }
 
 .parfum-blue__container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     border: 0;
-    position: relative;
     text-align: center;
     z-index: 3;
     overflow-y: hidden;
