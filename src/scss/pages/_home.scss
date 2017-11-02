@@ -33,7 +33,7 @@ body {
     transform-origin: top left;
 }
 .home__wrapper {
-    background-color: #45ccff;
+    background-color: white;
 }
 
 .one {
@@ -98,49 +98,49 @@ BULLES
 /* TODO: FIX Bubble position */
 .buble:nth-of-type(3n + 1) { margin-left: 75px; }
 
-.buble:nth-of-type(5n + 1) { animation-delay: 0s; animation-duration: 26s; margin-left: 20em;}
-.buble:nth-of-type(5n + 2) { animation-delay: 0s; animation-duration: 29s; margin-left: 75em;}
-.buble:nth-of-type(5n + 3) { animation-delay: 0s; animation-duration: 20s; margin-left: 35em;}
-.buble:nth-of-type(5n + 4) { animation-delay: 0s; animation-duration: 24s; margin-left: 120em;}
-.buble:nth-of-type(5n + 5) { animation-delay: 0s }
-.buble:nth-of-type(5n + 6) { animation-delay: 0s; animation-duration: 26s; margin-left: 20em;}
-.buble:nth-of-type(5n + 7) { animation-delay: 0s; animation-duration: 28s; margin-left: 70em;}
-.buble:nth-of-type(5n + 8) { animation-delay: 0s; animation-duration: 13s; margin-left: 39em;}
-.buble:nth-of-type(5n + 9) { animation-delay: 0s; animation-duration: 26s; margin-left: 120em;}
-.buble:nth-of-type(5n + 10) { animation-delay: 5s }
+.bubble:nth-of-type(5n + 1) { animation-delay: 0s; animation-duration: 26s; margin-left: 20%;}
+.bubble:nth-of-type(5n + 2) { animation-delay: 0s; animation-duration: 29s; margin-left: 75%;}
+.bubble:nth-of-type(5n + 3) { animation-delay: 0s; animation-duration: 20s; margin-left: 35%;}
+.bubble:nth-of-type(5n + 4) { animation-delay: 0s; animation-duration: 24s; margin-left: 12%;}
+.bubble:nth-of-type(5n + 5) { animation-delay: 0s }
+.bubble:nth-of-type(5n + 6) { animation-delay: 0s; animation-duration: 26s; margin-left: 20%;}
+.bubble:nth-of-type(5n + 7) { animation-delay: 0s; animation-duration: 28s; margin-left: 70%;}
+.bubble:nth-of-type(5n + 8) { animation-delay: 0s; animation-duration: 13s; margin-left: 39%;}
+.bubble:nth-of-type(5n + 9) { animation-delay: 0s; animation-duration: 26s; margin-left: 12%;}
+.bubble:nth-of-type(5n + 10) { animation-delay: 5s }
 
-.buble:nth-of-type(5n + 11) { animation-delay: 0s; animation-duration: 12s; margin-left: 10em;}
-.buble:nth-of-type(5n + 12) { animation-delay: 0s; animation-duration: 18s; margin-left: 20em;}
-.buble:nth-of-type(5n + 13) { animation-delay: 0s; animation-duration: 21s; margin-left: 60em;}
-.buble:nth-of-type(5n + 14) { animation-delay: 0s; animation-duration: 22s; margin-left: 125em;}
-.buble:nth-of-type(5n + 15) { animation-delay: 0s }
-.buble:nth-of-type(5n + 16) { animation-delay: 0s; animation-duration: 24s; margin-left: 110em;}
-.buble:nth-of-type(5n + 17) { animation-delay: 0s; animation-duration: 18s; margin-left: 75em;}
-.buble:nth-of-type(5n + 18) { animation-delay: 0s; animation-duration: 15s; margin-left: 90em;}
-.buble:nth-of-type(5n + 19) { animation-delay: 8s; animation-duration: 26s; margin-left: 95em;}
-.buble:nth-of-type(5n + 20) { animation-delay: 5s }
+.bubble:nth-of-type(5n + 11) { animation-delay: 0s; animation-duration: 12s; margin-left: 10%;}
+.bubble:nth-of-type(5n + 12) { animation-delay: 0s; animation-duration: 18s; margin-left: 20%;}
+.bubble:nth-of-type(5n + 13) { animation-delay: 0s; animation-duration: 21s; margin-left: 60%;}
+.bubble:nth-of-type(5n + 14) { animation-delay: 0s; animation-duration: 22s; margin-left: 12%;}
+.bubble:nth-of-type(5n + 15) { animation-delay: 0s }
+.bubble:nth-of-type(5n + 16) { animation-delay: 0s; animation-duration: 24s; margin-left: 11%;}
+.bubble:nth-of-type(5n + 17) { animation-delay: 0s; animation-duration: 18s; margin-left: 75%;}
+.bubble:nth-of-type(5n + 18) { animation-delay: 0s; animation-duration: 15s; margin-left: 65%;}
+.bubble:nth-of-type(5n + 19) { animation-delay: 8s; animation-duration: 26s; margin-left: 76%;}
+.bubble:nth-of-type(5n + 20) { animation-delay: 5s }
 
-.buble:nth-of-type(5n + 21) { animation-delay: 1s; animation-duration: 15s; margin-left: 130em;}
-.buble:nth-of-type(5n + 22) { animation-delay: 2s; animation-duration: 18s; margin-left: 150em;}
-.buble:nth-of-type(5n + 23) { animation-delay: 0s; animation-duration: 20s; margin-left: 125em;}
-.buble:nth-of-type(5n + 24) { animation-delay: 0s; animation-duration: 22s; margin-left: 110em;}
-.buble:nth-of-type(5n + 25) { animation-delay: 5s }
-.buble:nth-of-type(5n + 26) { animation-delay: 0s; animation-duration: 26s; margin-left: 200em;}
-.buble:nth-of-type(5n + 27) { animation-delay: 0s; animation-duration: 17s; margin-left: 180em;}
-.buble:nth-of-type(5n + 28) { animation-delay: 0s; animation-duration: 15s; margin-left: 165em;}
-.buble:nth-of-type(5n + 29) { animation-delay: 0s; animation-duration: 26s; margin-left: 100em;}
-.buble:nth-of-type(5n + 30) { animation-delay: 0s }
+.bubble:nth-of-type(5n + 21) { animation-delay: 1s; animation-duration: 15s; margin-left: 13%;}
+.bubble:nth-of-type(5n + 22) { animation-delay: 2s; animation-duration: 18s; margin-left: 15%;}
+.bubble:nth-of-type(5n + 23) { animation-delay: 0s; animation-duration: 20s; margin-left: 12%;}
+.bubble:nth-of-type(5n + 24) { animation-delay: 0s; animation-duration: 22s; margin-left: 11%;}
+.bubble:nth-of-type(5n + 25) { animation-delay: 5s }
+.bubble:nth-of-type(5n + 26) { animation-delay: 0s; animation-duration: 26s; margin-left: 20%;}
+.bubble:nth-of-type(5n + 27) { animation-delay: 0s; animation-duration: 17s; margin-left: 18%;}
+.bubble:nth-of-type(5n + 28) { animation-delay: 0s; animation-duration: 15s; margin-left: 16%;}
+.bubble:nth-of-type(5n + 29) { animation-delay: 0s; animation-duration: 26s; margin-left: 10%;}
+.bubble:nth-of-type(5n + 30) { animation-delay: 0s }
 
-.buble:nth-of-type(5n + 31) { animation-delay: 0s; animation-duration: 16s; margin-left: 220em;}
-.buble:nth-of-type(5n + 32) { animation-delay: 0s; animation-duration: 15s; margin-left: 275em;}
-.buble:nth-of-type(5n + 33) { animation-delay: 0s; animation-duration: 6s; margin-left: 235em;}
-.buble:nth-of-type(5n + 34) { animation-delay: 0s; animation-duration: 26s; margin-left: 2120em;}
-.buble:nth-of-type(5n + 35) { animation-delay: 0s }
-.buble:nth-of-type(5n + 36) { animation-delay: 0s; animation-duration: 26s; margin-left: 220em;}
-.buble:nth-of-type(5n + 37) { animation-delay: 0s; animation-duration: 114s; margin-left: 270em;}
-.buble:nth-of-type(5n + 38) { animation-delay: 0s; animation-duration: 10s; margin-left: 239em;}
-.buble:nth-of-type(5n + 39) { animation-delay: 0s; animation-duration: 26s; margin-left: 220em;}
-.buble:nth-of-type(5n +  40) { animation-delay: 5s }
+.bubble:nth-of-type(5n + 31) { animation-delay: 0s; animation-duration: 16s; margin-left: 22%;}
+.bubble:nth-of-type(5n + 32) { animation-delay: 0s; animation-duration: 15s; margin-left: 27%;}
+.bubble:nth-of-type(5n + 33) { animation-delay: 0s; animation-duration:  6s; margin-left: 23%;}
+.bubble:nth-of-type(5n + 34) { animation-delay: 0s; animation-duration: 26s; margin-left: 21%;}
+.bubble:nth-of-type(5n + 35) { animation-delay: 0s }
+.bubble:nth-of-type(5n + 36) { animation-delay: 0s; animation-duration: 26s; margin-left: 22%;}
+.bubble:nth-of-type(5n + 37) { animation-delay: 0s; animation-duration: 114s;margin-left: 27%;}
+.bubble:nth-of-type(5n + 38) { animation-delay: 0s; animation-duration: 10s; margin-left: 23%;}
+.bubble:nth-of-type(5n + 39) { animation-delay: 0s; animation-duration: 26s; margin-left: 22%;}
+.bubble:nth-of-type(5n + 40) { animation-delay: 5s }
 
 .buble::before {
     content: "";
@@ -172,51 +172,224 @@ BULLES
 }
 
 /****************************************
-PARFUM & NAME
+PARFUM & NAME BLUE
 *******************************************/
 
 .presentation-parfum-blue__container{
-  position: relative;
-  height: 45em;
-  width: 100%;
+    position: relative;
+    height: 100%;
+    width: 100%;
 }
 
 .parfum-blue__container{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border: 0px;
-  text-align: center;
-  z-index: 3;
+    border: 0;
+    position: relative;
+    text-align: center;
+    z-index: 3;
+    overflow-y: hidden;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .parfum-blue__name{
-  font-size: 7vh;
-  color: blue;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
+    font-size: 7vh;
+    color: blue;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
 }
 
 .parfum-blue__image{
-  width: 50vw;
-  max-width: 600px;
+    width: 65vw;
+    max-width: 600px;
 }
 
 
+/****************************************
+PARFUM & NAME BLACK
+*******************************************/
 
-
-
-
-
-
-
-
-
-.three {
-  background-color: #edde05;
+.presentation-parfum-black__container{
+    position: relative;
+    height: 100%;
+    width: 100%;
 }
 
-.four {
-  background-color: #e84b30;
+.parfum-black__container{
+    border: 0;
+    position: relative;
+    text-align: center;
+    z-index: 3;
+    overflow-y: hidden;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.parfum-black__name{
+    font-size: 7vh;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.parfum-black__image{
+    width: 65vw;
+    max-width: 600px;
+}
+
+.parfum-black__chocolates {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.parfum-black__chocolates img {
+    width: 60px;
+}
+
+.chocolat-1 {
+    position: absolute;
+    top: -60px;
+    left: 10%;
+    transform-origin: center;
+    animation-name: chocolat1;
+    animation-duration: 10s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.310, 0.440, 0.445, 1);;
+    animation-fill-mode: forwards;
+}
+
+@keyframes chocolat1{
+    100%{transform: translateY(110vh) rotate(-40deg);}
+}
+
+.chocolat-2 {
+    position: absolute;
+    top: -60px;
+    left: 22%;
+    transform-origin: center;
+    animation-name: chocolat2;
+    animation-duration: 8s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.310, 0.440, 0.445, 1);;
+    animation-fill-mode: forwards;
+}
+
+@keyframes chocolat2{
+    100%{transform: translateY(110vh) rotate(60deg);}
+}
+
+
+.chocolat-3 {
+    position: absolute;
+    top: -60px;
+    left: 35%;
+    transform-origin: center;
+    animation-name: chocolat3;
+    animation-duration: 5s;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.310, 0.440, 0.445, 1);;
+    animation-fill-mode: forwards;
+}
+
+@keyframes chocolat3{
+    100%{transform: translateY(110vh) rotate(-30deg);}
+}
+
+.chocolat-4 {
+    position: absolute;
+    top: -60px;
+    left: 45%;
+    transform-origin: center;
+    animation-name: chocolat4;
+    animation-duration: 7s;
+    animation-delay: 3.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.310, 0.440, 0.445, 1);;
+    animation-fill-mode: forwards;
+}
+
+@keyframes chocolat4{
+    100%{transform: translateY(110vh) rotate(-80deg);}
+}
+
+.chocolat-5 {
+    position: absolute;
+    top: -60px;
+    left: 55%;
+    transform-origin: center;
+    animation-name: chocolat5;
+    animation-duration: 3s;
+    animation-delay: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.310, 0.440, 0.445, 1);;
+    animation-fill-mode: forwards;
+}
+
+@keyframes chocolat5{
+    100%{transform: translateY(110vh) rotate(80deg);}
+}
+
+.chocolat-6 {
+    position: absolute;
+    top: -60px;
+    left: 70%;
+    transform-origin: center;
+    animation-name: chocolat6;
+    animation-duration: 7s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.310, 0.440, 0.445, 1);;
+    animation-fill-mode: forwards;
+}
+
+@keyframes chocolat6{
+    100%{transform: translateY(110vh) rotate(-180deg);}
+}
+
+.chocolat-7 {
+    position: absolute;
+    top: -60px;
+    left: 80%;
+    transform-origin: center;
+    animation-name: chocolat7;
+    animation-duration: 4s;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.310, 0.440, 0.445, 1);;
+    animation-fill-mode: forwards;
+}
+
+@keyframes chocolat7{
+    100%{transform: translateY(110vh) rotate(120deg);}
+}
+
+.chocolat-8 {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform-origin: center;
+    animation-name: chocolat8;
+    animation-duration: 8s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.310, 0.440, 0.445, 1);;
+    animation-fill-mode: forwards;
+}
+
+@keyframes chocolat8{
+    100%{transform: translateY(110vh) rotate(-100deg);}
 }

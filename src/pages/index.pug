@@ -1,29 +1,1 @@
-include ../partials/header.pug
-body#body
-    .home__container
-        .home__container2
-            a#logo.brand-name(href='#')
-                img(src='/img/logo.png', alt='Lacoste Logo')
-            #wrapper.home__box.home__wrapper
-                .one
-                    h1 Eau De Parfum L.12. 12
-                    p
-                        | Lacoste retourne à ses origines avec ce parfum directement inspiré par l'emblématique polo de la marque.
-                    p
-                        | Lacoste retourne à ses origines avec ce parfum directement inspiré par l'emblématique polo de la marque.
-                .two.presentation-parfum-blue__container
-                    .parfum-blue__container
-                        p.parfum-blue__name
-                            | Puissant
-                        img(src="/img/parfumBlue.png", alt="Parfum Bleu").parfum-blue__image
-
-                    - var i = 0
-                    while i < 3
-                        each val in [2, 3, 1, 2, 1, 3, 1, 1, 2, 3]
-                            .buble
-                                img(src="/img/bulle.png", alt="", class="buble__size" + val)
-                        - i++
-                .three 3
-                .four 4
-                .two 5
-include ../partials/footer.pug
+include ../partials/header.pugbody#body    .home__container        .home__container2            a#logo.brand-name(href='#')                img(src='/img/logo.png', alt='Lacoste Logo')            #wrapper.home__box.home__wrapper                .one                    h1 Eau De Parfum L.12. 12                    p                        | Lacoste retourne à ses origines avec ce parfum directement inspiré par l'emblématique polo de la marque.                    p                        | Lacoste retourne à ses origines avec ce parfum directement inspiré par l'emblématique polo de la marque.                .two.presentation-parfum-blue__container                    .parfum-blue__container                        p.parfum-blue__name                            | Puissant                        img(src="/img/parfumBlue.png", alt="Parfum Bleu").parfum-blue__image                    .bubbles                        - var i = 0                        while i < 3                            each val in [2, 3, 1, 2, 1, 3, 1, 1, 2, 3]                                .bubble                                    img(src="/img/bulle.png", alt="", class="bubble__size" + val)                            - i++                .presentation-parfum-black__container                    .parfum-black__container                        p.parfum-black__name                            | Intense                        img(src="/img/parfumBlack.png", alt="Parfum Bleu").parfum-black__image                    .parfum-black__chocolates                        - var i = 1                        each val in [1, 2, 1, 1, 2, 2, 1, 2]                            img(src="/img/chocolat-" + val + ".png", alt="", class="chocolat-" + i )                            - i++                .four 4                .two 5include ../partials/footer.pug
