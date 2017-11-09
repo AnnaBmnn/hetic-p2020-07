@@ -1,0 +1,42 @@
+.words {
+    width: 60%;
+    align-self: flex-end;
+    margin: 40px 0 80px;
+    @include font-settings($montserrat, 24px, 600);
+
+    @include medium {
+        font-size: 48px;
+        font-weight: 900;
+    }
+
+    @include large {
+        font-size: 68px;
+    }
+}
+
+.words--optimiste {
+    position: relative;
+    color: $yellow;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: -15%;
+        right: 110%;
+        display: block;
+        width: 130%;
+        height: 130%;
+        background-image: url('../img/parfumBlue.png');
+        background-size: cover;
+    }
+}
+
+.words__word {
+    margin: 20px 0;
+    @include medium {
+        margin: 30px;
+    }
+}
+.words__word--important {
+    font-weight: 900;
+}

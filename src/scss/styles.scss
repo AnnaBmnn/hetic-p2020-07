@@ -3,12 +3,21 @@
 
 @import 'abstracts/colors';
 @import 'abstracts/fonts';
+@import 'abstracts/shadows';
 @import 'abstracts/medias';
 @import 'abstracts/mixins';
 @import 'abstracts/animations';
 
 @import 'blocs/header';
 @import 'blocs/footer';
+@import 'blocs/titles';
+@import 'blocs/quote';
+@import 'blocs/description';
+@import 'blocs/texte';
+@import 'blocs/smells';
+@import 'blocs/words';
+@import 'blocs/footerParfum';
 
 @import 'pages/home';
 @import 'pages/product';
+@import 'pages/parfum/optimiste';

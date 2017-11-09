@@ -1,0 +1,37 @@
+.quote {
+    align-self: flex-start;
+    width: 80%;
+    position: relative;
+    padding: 80px 40px;
+    background-color: $white;
+    box-shadow: $boxShadow;
+}
+
+.quote--up {
+    z-index: 20;
+    will-change: transform;
+    transform: translate3d(0, -40px, 0);
+}
+
+.quote--optimiste {
+    &:after {
+        content: url('../img/polo.png');
+        position: absolute;
+        top: 100%;
+        left: 100%;
+        display: block;
+        height: auto;
+        width: 100%;
+        transform: translate3d(-50%, -50%, 0);
+    }
+}
+
+.quote__txt {
+    margin-bottom: 20px;
+    line-height: 1.25;  
+    @include font-settings($roboto, 28px, 500);	
+}
+
+.quote__author {
+    @include font-settings($roboto, 14px, 100); 
+}

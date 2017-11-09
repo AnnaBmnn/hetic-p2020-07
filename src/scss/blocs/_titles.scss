@@ -1,0 +1,20 @@
+.titles {
+    align-self: flex-start;
+    width: 80%;
+    padding: 40px 40px 100px;
+    color: $white;
+    box-shadow: $boxShadow;
+}
+
+.titles--optimiste {
+    background-color: $yellow;
+}
+
+.titles__title {
+    margin-bottom: 10px;
+    @include font-settings($montserrat, 35px, 900); 
+}
+
+.titles__subtitle {
+    @include font-settings($roboto, 18px, 500); 
+}

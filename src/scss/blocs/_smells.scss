@@ -1,0 +1,26 @@
+.smells {
+    z-index: -10;
+    width: 70%;
+    padding: 40px 40px 80px;
+    background-color: $white;
+    align-self: flex-end;
+}
+
+.smells--optimiste {
+    background-color: $yellow;
+    color: $white;
+}
+
+.smells__txt {
+    display: inline-block;
+    margin-bottom: 20px;
+    line-height: 1.25;
+    @include font-settings($roboto, 16px, 100); 
+
+    &:last-child {
+        margin-bottom: 0;
+    }    
+}
+.smells__btn {
+    color: $red;
+}

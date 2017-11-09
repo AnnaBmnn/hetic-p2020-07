@@ -1,0 +1,16 @@
+body {
+	overflow: scroll;
+	overflow-x: hidden;
+}
+
+.container {
+	position: relative;
+}
+
+.container--optimiste {
+	overflow-x: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-items: flex-start;
+	align-items: space-around;
+}
