@@ -19,6 +19,7 @@ body#body
                         p
                             | La maison Lacoste a ici tenté de restituer une certaine idée de cette fragrance se veut à l’image du polo blanc créé par René Lacoste :
                             | une élégance audacieuse et sportive.
+
                 .presentation-parfum-blue__container
                     .parfum-blue__container
                         p.parfum-blue__name
@@ -31,6 +32,7 @@ body#body
                                 .bubble
                                     img(src="/img/bulle.png", alt="", class="bubble__size" + val)
                             - i++
+
                 .presentation-parfum-black__container
                     .parfum-black__container
                         p.parfum-black__name
@@ -42,6 +44,19 @@ body#body
                         each val in [1, 2, 1, 1, 2, 2, 1, 2]
                             img(src="/img/chocolat-" + val + ".png", alt="", class="chocolat-" + i )
                             - i++
+
+                .presentation-parfum-red__container
+                    .parfum-red__container
+                        p.parfum-red__name
+                            | Puissant
+                        img(src="/img/parfumRed.png", alt="Parfum Rouge").parfum-red__image
+
+                    .parfum-red__mandarines
+                        - var i = 1
+                        each val in [1, 2, 1, 1, 2, 2, 1, 2]
+                            img(src="/img/mandarine.png", alt="", class="mandarine-" + i )
+                            - i++
+
                 .four 4
                 .two 5
 include ../partials/footer.pug

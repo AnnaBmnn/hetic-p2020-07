@@ -1,0 +1,152 @@
+/****************************************
+PARFUM & NAME BLACK
+*******************************************/
+
+.presentation-parfum-black__container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.parfum-black__container {
+    border: 0;
+    position: relative;
+    text-align: center;
+    z-index: 3;
+    overflow-y: hidden;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.parfum-black__name {
+    font-size: 7vh;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.parfum-black__image {
+    width: 65vw;
+    max-width: 600px;
+}
+
+.parfum-black__chocolates {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.parfum-black__chocolates img {
+    width: 60px;
+}
+
+.chocolat-1 {
+    position: absolute;
+    top: -60px;
+    left: 10%;
+    transform-origin: center;
+    animation-name: chocolat1;
+    animation-duration: 10s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.310, 0.440, 0.445, 1);;
+    animation-fill-mode: forwards;
+}
+
+.chocolat-2 {
+    position: absolute;
+    top: -60px;
+    left: 22%;
+    transform-origin: center;
+    animation-name: chocolat2;
+    animation-duration: 8s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.310, 0.440, 0.445, 1);;
+    animation-fill-mode: forwards;
+}
+
+.chocolat-3 {
+    position: absolute;
+    top: -60px;
+    left: 35%;
+    transform-origin: center;
+    animation-name: chocolat3;
+    animation-duration: 5s;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.310, 0.440, 0.445, 1);;
+    animation-fill-mode: forwards;
+}
+
+.chocolat-4 {
+    position: absolute;
+    top: -60px;
+    left: 45%;
+    transform-origin: center;
+    animation-name: chocolat4;
+    animation-duration: 7s;
+    animation-delay: 3.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.310, 0.440, 0.445, 1);;
+    animation-fill-mode: forwards;
+}
+
+.chocolat-5 {
+    position: absolute;
+    top: -60px;
+    left: 55%;
+    transform-origin: center;
+    animation-name: chocolat5;
+    animation-duration: 3s;
+    animation-delay: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.310, 0.440, 0.445, 1);;
+    animation-fill-mode: forwards;
+}
+
+.chocolat-6 {
+    position: absolute;
+    top: -60px;
+    left: 70%;
+    transform-origin: center;
+    animation-name: chocolat6;
+    animation-duration: 7s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.310, 0.440, 0.445, 1);;
+    animation-fill-mode: forwards;
+}
+
+.chocolat-7 {
+    position: absolute;
+    top: -60px;
+    left: 80%;
+    transform-origin: center;
+    animation-name: chocolat7;
+    animation-duration: 4s;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.310, 0.440, 0.445, 1);;
+    animation-fill-mode: forwards;
+}
+
+.chocolat-8 {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform-origin: center;
+    animation-name: chocolat8;
+    animation-duration: 8s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.310, 0.440, 0.445, 1);;
+    animation-fill-mode: forwards;
+}

@@ -1,0 +1,96 @@
+/****************************************
+PARFUM & NAME RED
+*******************************************/
+
+.presentation-parfum-red__container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.parfum-red__container {
+    border: 0;
+    position: relative;
+    text-align: center;
+    z-index: 3;
+    overflow-y: hidden;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.parfum-red__name {
+    font-size: 7vh;
+    color: $red;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.parfum-red__image {
+    width: 65vw;
+    max-width: 600px;
+}
+
+.parfum-red__mandarines {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+
+.mandarine-1 {
+    @include mandarine(10%);
+    animation-name: mandarine1;
+    animation-duration: 10s;
+    animation-delay: 0s;
+}
+
+.mandarine-2 {
+    @include mandarine(22%);
+    animation-name: mandarine2;
+    animation-duration: 8s;
+    animation-delay: 2s;
+}
+
+.mandarine-3 {
+    @include mandarine(35%);
+    animation-name: mandarine3;
+    animation-duration: 5s;
+    animation-delay: 3s;
+}
+
+.mandarine-4 {
+    @include mandarine(45%);
+    animation-name: mandarine4;
+    animation-duration: 7s;
+    animation-delay: 3.5s;
+}
+.mandarine-5 {
+    @include mandarine(55%);
+    animation-name: mandarine5;
+    animation-duration: 3s;
+    animation-delay: 8s;
+}
+.mandarine-6 {
+    @include mandarine(70%);
+    animation-name: mandarine6;
+    animation-duration: 7s;
+    animation-delay: 2s;
+}
+.mandarine-7 {
+    @include mandarine(80%);
+    animation-name: mandarine7;
+    animation-duration: 4s;
+    animation-delay: 3s;
+}
+.mandarine-8 {
+    @include mandarine(50%);
+    animation-name: mandarine8;
+    animation-duration: 8s;
+    animation-delay: 1s;
+}

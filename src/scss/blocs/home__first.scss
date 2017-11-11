@@ -1,0 +1,82 @@
+.home__first {
+    height: 100vh;
+}
+
+.first__container {
+    background-color: white;
+    display: flex;
+    z-index: 1500;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    height: 100%;
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+        max-width: 400px;
+        z-index: inherit;
+
+        @media screen and (min-width: 350px){
+            font-size: 3rem;
+        }
+    }
+    p {
+        font-size: 1rem;
+        max-width: 380px;
+        margin: 15px;
+        z-index: inherit;
+    }
+}
+
+/****************************************
+SQUARES
+*******************************************/
+
+.first__squares {
+    background-color: transparent;
+    position: absolute;
+    height: 100%;
+    width: 100vw;
+    max-width: 900px;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: auto;
+}
+
+.square {
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+}
+.squares__1 {
+    @extend .square;
+    background-color: $yellow;
+    top: 110px;
+    left: -60px;
+}
+
+.squares__2 {
+    @extend .square;
+    background-color: $black;
+    top: 280px;
+    right: 45rem;
+}
+
+.squares__3 {
+    @extend .square;
+    background-color: $red;
+    top: 60%;
+    right: calc(20% - 20rem);
+}
+
+.squares__4 {
+    @extend .square;
+    background-color: $blue;
+    top: 35rem;
+    right: calc(40% - 20rem)
+}
