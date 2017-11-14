@@ -5,12 +5,13 @@
     @include font-settings($montserrat, 24px, 600);
 
     @include medium {
+        order: 3;
         font-size: 48px;
         font-weight: 900;
     }
 
     @include large {
-        font-size: 68px;
+        font-size: 60px;
     }
 }
 

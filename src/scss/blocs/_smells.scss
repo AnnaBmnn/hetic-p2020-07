@@ -1,9 +1,18 @@
 .smells {
+    align-self: flex-end;
     z-index: -10;
     width: 70%;
     padding: 40px 40px 80px;
     background-color: $white;
-    align-self: flex-end;
+
+    @include medium {
+        order: 5;
+        width: 50%;
+        padding: 60px 40px;
+    }
+    @include large {
+        padding: 80px 40px;
+    }
 }
 
 .smells--optimiste {
@@ -21,6 +30,7 @@
         margin-bottom: 0;
     }    
 }
+
 .smells__btn {
     color: $red;
 }

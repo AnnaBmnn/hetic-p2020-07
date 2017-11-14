@@ -10,6 +10,8 @@
     box-shadow: $boxShadow;
 
     @include medium {
+        order: 7;
+        width: 100%;
         box-shadow: none;
     }
 }
@@ -17,6 +19,10 @@
 .footerParfum--up {
     will-change: transform;
     transform: translate3d(0, -40px, 0);
+
+    @include medium {
+        transform: none;
+    }
 }
 
 .footerParfum__title {
