@@ -5,19 +5,19 @@ BULLES
 .bubble {
     position: absolute;
     animation: blue__move 25s linear infinite;
-    opacity: 0;
+    bottom: -30px;
 }
 
 .bubble__size1{
-    width: 20px;
+    width: 22px;
 }
 
 .bubble__size2{
-    width: 15px;
+    width: 17px;
 }
 
 .bubble__size3{
-    width: 22px;
+    width: 25px;
 }
 
 .bubble:nth-of-type(3n + 1) { margin-left: 75px; }
@@ -74,7 +74,7 @@ BULLES
     margin-left: 50px;
 }
 
-.buble::after {
+.bubble::after {
     content: "";
     position: absolute;
     top: -20%;
@@ -96,17 +96,17 @@ PARFUM & NAME BLUE
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    border: 0;
-    text-align: center;
-    z-index: 3;
-    overflow-y: hidden;
     height: 100vh;
+    border: 0;
+    z-index: 3;
+    text-align: center;
+    overflow-y: hidden;
+    transform: translate(-50%, -50%);
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .parfum-blue__name{
@@ -114,9 +114,11 @@ PARFUM & NAME BLUE
     color: blue;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
+    margin: 10px;
 }
 
 .parfum-blue__image{
-    width: 65vw;
+    height: 50vh;
     max-width: 600px;
+    margin: 10px;
 }

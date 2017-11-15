@@ -23,7 +23,7 @@ let maxTranslate        = theDiv.scrollWidth - clientWidth;
 let xDown               = null;
 let yDown               = null;
 
-let scrollSpeed         = 60;
+let scrollSpeed         = 70;
 if (OSName === "MacOS")
 {
     scrollSpeed = 1;

@@ -12,7 +12,7 @@ body#body
                         .squares__3
                         .squares__4
                     .first__container
-                        h1 Eau De Parfum L.12. 12
+                        h1 Eau de Parfum L.12. 12
                         p
                             | Une collection qui s’adapte en fonction des envies, de l'humeur ou des saisons.
                             | Lacoste revient à ses origines avec ce parfum L.12.12 directement inspiré par l'emblématique polo de la marque.
@@ -27,7 +27,7 @@ body#body
                         img(src="/img/parfumBlue.png", alt="Parfum Bleu").parfum-blue__image
                     .bubbles
                         - var i = 0
-                        while i < 3
+                        while i < 2
                             each val in [2, 3, 1, 2, 1, 3, 1, 1, 2, 3]
                                 .bubble
                                     img(src="/img/bulle.png", alt="", class="bubble__size" + val)
@@ -38,7 +38,6 @@ body#body
                         p.parfum-black__name
                             | Intense
                         img(src="/img/parfumBlack.png", alt="Parfum Bleu").parfum-black__image
-
                     .parfum-black__chocolates
                         - var i = 1
                         each val in [1, 2, 1, 1, 2, 2, 1, 2]
@@ -50,14 +49,17 @@ body#body
                         p.parfum-red__name
                             | Puissant
                         img(src="/img/parfumRed.png", alt="Parfum Rouge").parfum-red__image
-
                     .parfum-red__mandarines
                         - var i = 1
                         each val in [1, 2, 1, 1, 2, 2, 1, 2]
                             img(src="/img/mandarine.png", alt="", class="mandarine-" + i )
                             - i++
 
-                .four 4
-                .two 5
+                .presentation-parfum-yellow__container
+                    .parfum-yellow_container
+                        p.parfum-yellow__name
+                            | Optimiste
+                        img(src="/img/parfumYellow.png", alt="Parfum Jaune").parfum-yellow__image
+                    canvas.parfum-yellow__canvas
 include ../partials/footer.pug
 

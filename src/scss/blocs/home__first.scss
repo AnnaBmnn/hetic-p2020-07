@@ -3,17 +3,18 @@
 }
 
 .first__container {
-    background-color: white;
+    background-color: transparent;
     display: flex;
-    z-index: 1500;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: justify;
     height: 100%;
+    width: 100vw;
 
     h1 {
         font-size: 2rem;
+        font-family: Montserrat, "sans-serif";
+        font-weight: bold;
         margin-bottom: 15px;
         max-width: 400px;
         z-index: inherit;
@@ -24,6 +25,8 @@
     }
     p {
         font-size: 1rem;
+        font-family: 'Roboto', "sans-serif";
+        font-weight: normal;
         max-width: 380px;
         margin: 15px;
         z-index: inherit;
@@ -39,11 +42,10 @@ SQUARES
     position: absolute;
     height: 100%;
     width: 100vw;
-    max-width: 900px;
     top: 0;
     left: 0;
     overflow: hidden;
-    z-index: auto;
+    z-index: -1;
 }
 
 .square {
@@ -57,26 +59,26 @@ SQUARES
     @extend .square;
     background-color: $yellow;
     top: 110px;
-    left: -60px;
+    right: calc(150px + 50vw);
 }
 
 .squares__2 {
     @extend .square;
     background-color: $black;
     top: 280px;
-    right: 45rem;
+    right: calc(120px + 70vw);
 }
 
 .squares__3 {
     @extend .square;
     background-color: $red;
-    top: 60%;
-    right: calc(20% - 20rem);
+    top: calc(60vh + 110px);
+    right: calc(20vw - 150px);
 }
 
 .squares__4 {
     @extend .square;
     background-color: $blue;
-    top: 35rem;
+    top: 34rem;
     right: calc(40% - 20rem)
 }

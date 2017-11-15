@@ -1,62 +1,57 @@
 @keyframes blue__move {
-    0% {
-        opacity: 1;
-        bottom: -100%;
-        left: 20%;
-    }
     100% {
-        opacity: 1;
-        bottom: 100%;
-        left: 20%;
+        transform: translate3d(0, -110vh, 0);
     }
 }
 
 @keyframes chocolat1 {
-    100%{transform: translateY(110vh) rotate(-40deg);}
+    100%{transform: translate3d(0, 110vh, 0) rotate(-40deg);}
 }
 @keyframes chocolat2 {
-    100%{transform: translateY(110vh) rotate(60deg);}
+    100%{transform: translate3d(0, 110vh, 0) rotate(60deg);}
 }
 @keyframes chocolat3 {
-    100%{transform: translateY(110vh) rotate(-30deg);}
+    100%{transform: translate3d(0, 110vh, 0) rotate(-30deg);}
 }
 @keyframes chocolat4 {
-    100%{transform: translateY(110vh) rotate(-80deg);}
+    100%{transform: translate3d(0, 110vh, 0) rotate(-80deg);}
 }
 @keyframes chocolat5 {
-    100%{transform: translateY(110vh) rotate(80deg);}
+    100%{transform: translate3d(0, 110vh, 0) rotate(80deg);}
 }
 @keyframes chocolat6 {
-    100%{transform: translateY(110vh) rotate(-180deg);}
+    100%{transform: translate3d(0, 110vh, 0) rotate(-180deg);}
 }
 @keyframes chocolat7 {
-    100%{transform: translateY(110vh) rotate(120deg);}
+    100%{transform: translate3d(0, 110vh, 0) rotate(120deg);}
 }
 @keyframes chocolat8 {
-    100%{transform: translateY(110vh) rotate(-100deg);}
+    100%{transform: translate3d(0, 110vh, 0) rotate(-100deg);}
 }
 
+
+
 @keyframes mandarine1{
-    100%{transform: translateY(110vh) rotate(-40deg);}
+    100%{transform: translate3d(0, 110vh, 0) rotate(-40deg);}
 }
 @keyframes mandarine2{
-    100%{transform: translateY(110vh) rotate(60deg);}
+    100%{transform: translate3d(0, 110vh, 0) rotate(60deg);}
 }
 @keyframes mandarine3{
-    100%{transform: translateY(110vh) rotate(-30deg);}
+    100%{transform: translate3d(0, 110vh, 0) rotate(-30deg);}
 }
 @keyframes mandarine4{
-    100%{transform: translateY(110vh) rotate(-80deg);}
+    100%{transform: translate3d(0, 110vh, 0) rotate(-80deg);}
 }
 @keyframes mandarine5{
-    100%{transform: translateY(110vh) rotate(80deg);}
+    100%{transform: translate3d(0, 110vh, 0) rotate(80deg);}
 }
 @keyframes mandarine6{
-    100%{transform: translateY(110vh) rotate(-180deg);}
+    100%{transform: translate3d(0, 110vh, 0) rotate(-180deg);}
 }
 @keyframes mandarine7{
-    100%{transform: translateY(110vh) rotate(120deg);}
+    100%{transform: translate3d(0, 110vh, 0) rotate(120deg);}
 }
 @keyframes mandarine8{
-    100%{transform: translateY(110vh) rotate(-100deg);}
+    100%{transform: translate3d(0, 110vh, 0) rotate(-100deg);}
 }
