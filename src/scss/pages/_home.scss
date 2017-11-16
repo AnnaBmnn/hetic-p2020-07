@@ -12,8 +12,10 @@ body {
     position: absolute;
     width: 100vh;
     height: 100vw;
+
+    transition: 0.1s;
     .home__box {
-        width: 500vw;
+        width: 600vw;
         height: 100vh;
         display: flex;
         > div {
@@ -28,7 +30,7 @@ body {
     transform-origin: top left;
 }
 .home__wrapper {
-    background-color: white;
+    background-color: transparent;
 }
 
 /**
