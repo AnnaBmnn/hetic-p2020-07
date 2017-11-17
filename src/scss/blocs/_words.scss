@@ -22,13 +22,18 @@
     &:before {
         content: '';
         position: absolute;
-        top: -15%;
-        right: 110%;
+        top: 0%;
+        left: -100%;
         display: block;
-        width: 130%;
-        height: 130%;
+        width: 150%;
+        height: 125%;
         background-image: url('../img/parfumBlue.png');
-        background-size: cover;
+        background-repeat: no-repeat;
+        background-size: contain;
+        @include large {
+            height: 100%;
+            top: -20%;
+        }
     }
 }
 

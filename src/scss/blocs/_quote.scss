@@ -18,7 +18,7 @@
     z-index: 20;
     will-change: transform;
     transform: translate3d(0, -40px, 0);
-    @include medium{
+    @include medium {
         transform: none;
     }
 }
@@ -33,6 +33,10 @@
         height: auto;
         width: 100%;
         transform: translate3d(-50%, -50%, 0);
+        @include large {
+            transform: translate3d(-25%, -50%, 0);
+
+        }
     }
 }
 
