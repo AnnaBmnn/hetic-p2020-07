@@ -6,36 +6,24 @@
     background-color: $white;
     box-shadow: $boxShadow;
 
+
     @include medium {
         align-self: flex-end;
         order: 2;
         width: 50%;
         margin-right: 40px;
         padding: 40px 40px;
-
-        &:before {
-            content: '';
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            transform: translate3d(40px, 40px, 0);
-        }
+        background-color: none;
+        box-shadow: none;
     }
 
     @include large {
         width: 40%;
         margin-right: 60px;
         padding: 40px 60px;
-
-        &:before {
-            transform: translate3d(60px, 40px, 0);
-        }
     }
 }
+
 .description--up {
     transform: translate3d(0, -40px, 0);
 
@@ -43,15 +31,49 @@
         transform: none;
     }
 }
-.description--optimiste {
+
+.description__blockColor {
     @include medium {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
         &:before {
+            content: '';
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            z-index: 20;
+            width: 100%;
+            height: 100%;
+            background-color: $white;
+            box-shadow: $boxShadow;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            z-index: 10;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.description__blockColor--optimiste {
+    @include medium {
+        &:after {
             background-color: $yellow;
         }
     }    
 }
 
 .description__txt {
+    position: relative;
+    z-index: 20;
     display: inline-block;
     margin-bottom: 20px;
     line-height: 1.25;
