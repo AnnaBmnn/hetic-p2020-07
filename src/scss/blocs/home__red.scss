@@ -9,17 +9,18 @@ PARFUM & NAME RED
 }
 
 .parfum-red__container {
-    border: 0;
     position: relative;
-    text-align: center;
-    z-index: 3;
-    overflow-y: hidden;
     height: 100vh;
+    overflow-y: hidden;
+    z-index: 3;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    text-align: center;
+    background-color: transparent;
 }
 
 .parfum-red__name {
@@ -30,11 +31,18 @@ PARFUM & NAME RED
     margin: 10px;
 }
 
-.parfum-red__image {
-    height: 50vh;
-    max-width: 600px;
-    margin: 10px;
+.parfum-red__image-container {
+    @include image-container();
 }
+.parfum-red__image {
+    @include image-handler();
+}
+
+.discover__red {
+    @include discover-button($red)
+}
+
+
 
 .parfum-red__mandarines {
     position: absolute;

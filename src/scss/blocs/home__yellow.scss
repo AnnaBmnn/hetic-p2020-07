@@ -4,19 +4,19 @@
     width: 100%;
 }
 
-.parfum-yellow_container {
-    border: 0;
-    background-color: transparent;
+.parfum-yellow__container {
     position: relative;
-    text-align: center;
-    z-index: 3;
-    overflow-y: hidden;
     height: 100vh;
+    overflow-y: hidden;
+    z-index: 3;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    text-align: center;
+    background-color: transparent;
 }
 
 .parfum-yellow__name {
@@ -27,15 +27,20 @@
     margin: 10px;
 }
 
+.parfum-yellow__image-container {
+    @include image-container();
+}
 .parfum-yellow__image {
-    height: 50vh;
-    max-width: 600px;
-    margin: 10px;
-    background-color: transparent;
+    @include image-handler();
+}
+
+.discover__yellow {
+    @include discover-button($yellow)
 }
 
 .parfum-yellow__canvas {
     position: absolute;
     bottom: 0;
     left: 0;
+    z-index: -1;
 }

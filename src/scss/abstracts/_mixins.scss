@@ -8,3 +8,38 @@
     animation-fill-mode: forwards;
     width: 60px;
 }
+@mixin image-container() {
+    width: 800px;
+    height: 800px;
+    max-width: 40vh;
+    max-height: 40vh;
+    background-color: $white;
+    box-shadow: 4px 4px 14px -4px rgba(0,0,0,0.75);
+
+    margin-top: 17vh;
+    margin-right: -10vh;
+}
+
+@mixin image-handler() {
+    position: relative;
+    height: 50vh;
+    max-width: 600px;
+
+    margin-top: -15vh;
+    margin-left: -10vh;
+}
+
+@mixin discover-button($color) {
+    font-family: Roboto, "sans-serif";
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: $color;
+    line-height: 6vh;
+    margin: auto -20vh auto auto;
+
+    @media screen and (min-width: 450px){
+        font-size: 1.5rem;
+    }
+}
+
+

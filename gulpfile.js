@@ -16,13 +16,14 @@ let uglify = require("gulp-uglify");
 let postcss = require("gulp-postcss");
 let autoprefixer = require("autoprefixer");
 let pxtorem = require("postcss-pxtorem");
+
 let options = {
     propList: ["*"],
     fallback: true,
 };
 let processors = [autoprefixer, pxtorem(options)];
-let isProd = process.env.NODE_ENV === "production";
-
+//let isProd = process.env.NODE_ENV === "production";
+let isProd = true;
 
 /**
  * PUG

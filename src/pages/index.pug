@@ -4,6 +4,12 @@ body#body
         .home__container2
             a#logo.brand-name(href='#')
                 img(src='/img/logo.png', alt='Lacoste Logo')
+            .home__instruction
+                i.icon-left-open-big
+                i.icon-left-open-big
+                span.instructions__text Faites glissez sur le coté
+                i.icon-right-open-big
+                i.icon-right-open-big
             #wrapper.home__box.home__wrapper
                 .home__first
                     .first__squares
@@ -19,12 +25,19 @@ body#body
                         p
                             | La maison Lacoste a ici tenté de restituer une certaine idée de cette fragrance se veut à l’image du polo blanc créé par René Lacoste :
                             | une élégance audacieuse et sportive.
+                .presentation-parfum-yellow__container#yellow
+                    canvas.parfum-yellow__canvas
 
-                .presentation-parfum-blue__container
-                    .parfum-blue__container
-                        p.parfum-blue__name
-                            | Puissant
-                        img(src="/img/parfumBlue.png", alt="Parfum Bleu").parfum-blue__image
+                    .parfum-yellow__container
+                        p.parfum-yellow__name
+                            | Optimiste
+                        .parfum-yellow__image-container
+                            img(src="/img/parfumYellow.png", alt="Parfum Jaune").parfum-yellow__image
+                            a.discover__yellow(href="#")
+                                | Découvrir
+
+
+                .presentation-parfum-blue__container#blue
                     .bubbles
                         - var i = 0
                         while i < 2
@@ -32,36 +45,48 @@ body#body
                                 .bubble
                                     img(src="/img/bulle.png", alt="", class="bubble__size" + val)
                             - i++
+                    .parfum-blue__container
+                        p.parfum-blue__name
+                            | Puissant
+                        .parfum-blue__image-container
+                            img(src="/img/parfumBlue.png", alt="Parfum Jaune").parfum-blue__image
+                            a.discover__blue(href="#")
+                                | Découvrir
+
 
                 .presentation-parfum-black__container
-                    .parfum-black__container
-                        p.parfum-black__name
-                            | Intense
-                        img(src="/img/parfumBlack.png", alt="Parfum Bleu").parfum-black__image
                     .parfum-black__chocolates
                         - var i = 1
                         each val in [1, 2, 1, 1, 2, 2, 1, 2]
                             img(src="/img/chocolat-" + val + ".png", alt="", class="chocolat-" + i )
                             - i++
+                    .parfum-black__container
+                        p.parfum-black__name
+                            | Intense
+                        .parfum-black__image-container
+                            img(src="/img/parfumBlack.png", alt="Parfum Jaune").parfum-black__image
+                            a.discover__black(href="#")
+                                | Découvrir
+
 
                 .presentation-parfum-red__container
-                    .parfum-red__container
-                        p.parfum-red__name
-                            | Puissant
-                        img(src="/img/parfumRed.png", alt="Parfum Rouge").parfum-red__image
                     .parfum-red__mandarines
                         - var i = 1
                         each val in [1, 2, 1, 1, 2, 2, 1, 2]
                             img(src="/img/mandarine.png", alt="", class="mandarine-" + i )
                             - i++
-
-                .presentation-parfum-yellow__container#yellow
-                    .parfum-yellow_container
-                        p.parfum-yellow__name
-                            | Optimiste
-                        img(src="/img/parfumYellow.png", alt="Parfum Jaune").parfum-yellow__image
-                    canvas.parfum-yellow__canvas
+                    .parfum-red__container
+                        p.parfum-red__name
+                            | Energique
+                        .parfum-red__image-container
+                            img(src="/img/parfumRed.png", alt="Parfum Jaune").parfum-red__image
+                            a.discover__red(href="#")
+                                | Découvrir
 
                 .presentation-parfum-white__container
+
+                .presentation-menu__container
+
+
 include ../partials/footer.pug
 

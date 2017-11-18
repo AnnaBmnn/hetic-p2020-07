@@ -9,7 +9,7 @@ if (navigator.appVersion.indexOf("Win")  !== -1) {
 }  else if (navigator.appVersion.indexOf("X11")  !== -1)
 {
     OSName = "UNIX";
-} else if (navigator.appVersion.indexOf("Linux")!== -1)
+} else if (navigator.appVersion.indexOf("Linux") !== -1)
 {
     OSName = "Linux";
 }

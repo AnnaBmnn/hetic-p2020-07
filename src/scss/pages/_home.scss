@@ -13,9 +13,8 @@ body {
     width: 100vh;
     height: 100vw;
 
-    transition: 0.1s;
     .home__box {
-        width: 600vw;
+        width: 700vw;
         height: 100vh;
         display: flex;
         > div {
@@ -49,4 +48,24 @@ body {
         transform: translate3d(0, 0, 0);
         -webkit-transform: translate3d(0, 0, 0);
     }
+}
+
+/**
+ * INSTRUCTIONS
+ */
+.home__instruction {
+    transform: translate3d(0, 0, 0);
+    position: fixed;
+    display: flex;
+    width: 100vw;
+    bottom: 5vh;
+    text-align: center;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    color: #CFCFCF;
+}
+
+.instructions__text {
+    margin: 1rem;
 }
