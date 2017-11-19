@@ -1,0 +1,33 @@
+.texte {
+    z-index: -10;
+    align-self: flex-start;      
+    width: 70%;
+    margin-top: 60px;
+    padding: 40px 40px 80px;
+    background-color: $white;
+
+    @include medium {
+        order: 6;
+        width: 50%;
+        padding: 60px 40px;
+    }
+    @include large {
+        padding: 80px 40px;
+    }
+}
+
+.texte--optimiste {
+    background-color: $yellow;
+    color: $white;
+}
+
+.texte__txt {
+    display: inline-block;
+    margin-bottom: 20px;
+    line-height: 1.25;
+    @include font-settings($roboto, 16px, 100); 
+
+    &:last-child {
+        margin-bottom: 0;
+    }    
+}

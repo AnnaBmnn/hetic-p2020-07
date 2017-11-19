@@ -1,0 +1,43 @@
+.titles {
+    align-self: flex-start;
+    width: 80%;
+    padding: 40px 40px 100px;
+    color: $white;
+    box-shadow: $boxShadow;
+
+    @include medium {
+        order: 1;
+        background-color: $white;
+        color: $black;
+        box-shadow: none;
+    }
+}
+
+.titles--optimiste {
+    background-color: $yellow;
+    @include medium {
+        background-color: $white;
+    }
+}
+
+.titles__title {
+    margin-bottom: 10px;
+    @include font-settings($montserrat, 35px, 900);
+    text-transform: uppercase;
+
+    @include medium {
+        color: $yellow;
+        @include font-settings($montserrat, 90px, 900);
+    }
+
+    @include large {
+        @include font-settings($montserrat, 115px, 900);
+    }  
+}
+
+.titles__subtitle {
+    @include font-settings($roboto, 18px, 500);
+    @include medium {
+        font-size: 24px;
+    } 
+}

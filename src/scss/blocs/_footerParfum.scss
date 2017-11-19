@@ -1,0 +1,85 @@
+.footerParfum {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    //REVOIR MARGIN
+    margin: 0 auto;
+    padding: 40px 0;
+    background-color: $white;
+    box-shadow: $boxShadow;
+
+    @include medium {
+        order: 7;
+        width: 100%;
+        box-shadow: none;
+    }
+}
+
+.footerParfum--up {
+    will-change: transform;
+    transform: translate3d(0, -40px, 0);
+
+    @include medium {
+        transform: none;
+    }
+}
+
+.footerParfum__title {
+    margin-bottom: 30px;
+}
+
+.footerParfum__titleImg {
+    width: 120px;
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.footerParfum__titleTxt {
+    @include font-settings($roboto, 16px, 200);    
+}
+
+.footerParfum__nav {
+    text-align: center;
+
+    @include medium {
+        width: 100%;
+    }
+
+    ul {
+        @include medium {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 100%;
+        }
+    }
+}
+
+.footerParfum__navItem {
+    display: inline-block;
+    padding: 10px 0;
+    @include font-settings($montserrat, 20px, bold); 	
+}
+
+.footerParfum__navItem--optimiste {
+    color: $yellow;  
+}
+
+.footerParfum__navItem--puissant {
+    color: $blue;  
+}
+
+.footerParfum__navItem--energique {
+    color: $red;  
+}
+
+.footerParfum__navItem--pur {
+    color: $green;  
+}
+
+.footerParfum__navItem--intense {
+    color: $black;  
+}
