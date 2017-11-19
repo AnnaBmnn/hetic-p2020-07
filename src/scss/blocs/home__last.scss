@@ -1,0 +1,40 @@
+.menu__container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-family: Montserrat, "sans-serif";
+    font-size: 4vh;
+}
+
+.menu__container > li {
+    margin: 2vh;
+
+}
+
+.menu__container a {
+    text-decoration: none;
+}
+
+.menu__container .yellow {
+    color: $yellow;
+}
+
+.menu__container .blue {
+    color: $blue;
+}
+
+.menu__container .black {
+    color: $black;
+}
+
+.menu__container .red {
+    color: $red;
+}
+
+.menu__container .green {
+    color: $green;
+}

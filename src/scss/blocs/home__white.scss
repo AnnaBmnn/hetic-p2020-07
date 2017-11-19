@@ -1,0 +1,135 @@
+.presentation-parfum-white__container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.parfum-white__container {
+    position: relative;
+    height: 100vh;
+    overflow-y: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    background-color: transparent;
+}
+
+.parfum-white__name {
+    font-size: 7vh;
+    color: $green;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin: 10px;
+}
+
+.parfum-white__image-container {
+    @include image-container();
+}
+.parfum-white__image {
+    @include image-handler();
+}
+
+.discover__white {
+    @include discover-button($green)
+}
+
+/**
+    FLOWERS !
+ */
+.parfum-white__flowers {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+}
+
+@mixin flower($animation, $duration) {
+    position: absolute;
+    transform-origin: center;
+    animation-name: $animation;
+    animation-duration: $duration;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    z-index: -1;
+}
+
+.flower-1 {
+    @include flower("flower-1", 3s);
+    width: 300px;
+    bottom: -2%;
+    left: 0;
+    z-index: 1;
+
+    @media only screen and (max-width: 500px) {
+        .flower-1 {
+            width: 180px;
+            left: -18vw;
+        }
+    }
+}
+.flower-2 {
+    @include flower("flower-2", 4s);
+    width: 250px;
+    bottom: -2%;
+    left: 22%;
+
+    @media only screen and (max-width: 500px) {
+        .fleur-2 {
+            width: 200px;
+        }
+    }
+}
+.flower-3 {
+    @include flower("flower-3", 3.5s);
+    width: 200px;
+    bottom: -2%;
+    left: 35%;
+}
+.flower-4 {
+    @include flower("flower-4", 2.7s);
+    width: 180px;
+    bottom: -2%;
+    left: 46%;
+}
+.flower-5 {
+    @include flower("flower-5", 3s);
+    width: 300px;
+    bottom: -2%;
+    left: 55%;
+
+    @media only screen and (max-width: 500px) {
+        .fleur-5 {
+            width: 230px;
+        }
+    }
+}
+.flower-6 {
+    @include flower("flower-6", 7s);
+    width: 200px;
+    bottom: -2%;
+    left: 70%;
+
+    @media only screen and (max-width: 500px) {
+        .fleur-6 {
+            display: none;
+        }
+    }
+}
+.flower-7 {
+    @include flower("flower-7", 4s);
+    width: 290px;
+    bottom: -2%;
+    left: 80%;
+
+    @media only screen and (max-width: 500px) {
+        .fleur-7 {
+            display: none;
+        }
+    }
+}
