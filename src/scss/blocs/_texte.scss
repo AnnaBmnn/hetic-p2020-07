@@ -25,9 +25,11 @@
     display: inline-block;
     margin-bottom: 20px;
     line-height: 1.25;
-    @include font-settings($roboto, 16px, 100); 
-
+    @include font-settings($roboto, 16px, 500); 
     &:last-child {
         margin-bottom: 0;
+    }
+    @include medium {
+        font-size: 20px;
     }    
 }

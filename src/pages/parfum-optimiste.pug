@@ -2,13 +2,15 @@ include ../partials/header.pug
 
 body
     .container
-        section.titles.titles--optimiste
+        section.titles.titles--optimiste.js-paralax(data-speed='6')
             h1.titles__title
                 | Optimiste
             span.titles__subtitle
                 | Eau de Parfum - L. 12. 12.
 
-        section.description.description--up
+        section.description.description--up.description--optimiste.js-paralax(data-speed='2')
+            div.description__blockColor.description__blockColor--optimiste
+            
             p.description__txt
                 | La senteur épicée de l’Eau de Lacoste Jaune ! Habillez votre peau d'une senteur légère et pétillante.
             p.description__txt
@@ -27,13 +29,13 @@ body
                 li.words__word.words__word--important
                     | Explosif
 
-        section.smells.smells--optimiste
+        section.smells.smells--optimiste.js-paralax(data-speed='0.9')
             p.smells__txt
                 | Un parfum dynamisant pour les gentleman-sportif qui contient du pamplemousse associé à un accord tonique et effervescent.
             a.smells__btn(href="#")
                 | Pyramide Olfactive
 
-        section.quote.quote--up.quote--optimiste
+        section.quote.quote--up.quote--optimiste.js-paralax(data-speed='2')
             blockquote.quote__txt
                 p
                     | " L'optimisme d'un polo jaune vif un matin de grand soleil. "

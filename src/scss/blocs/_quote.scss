@@ -1,16 +1,26 @@
 .quote {
     align-self: flex-start;
-    width: 80%;
+    width: 85%;
     position: relative;
     padding: 80px 40px;
     background-color: $white;
     box-shadow: $boxShadow;
+    @include medium {
+        order: 4;
+        width: 45%;
+    }
+    @include large {
+        width: 45%;
+    }
 }
 
 .quote--up {
     z-index: 20;
     will-change: transform;
     transform: translate3d(0, -40px, 0);
+    @include medium {
+        transform: none;
+    }
 }
 
 .quote--optimiste {
@@ -23,6 +33,10 @@
         height: auto;
         width: 100%;
         transform: translate3d(-50%, -50%, 0);
+        @include large {
+            transform: translate3d(-25%, -50%, 0);
+
+        }
     }
 }
 
