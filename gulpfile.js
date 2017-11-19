@@ -19,7 +19,7 @@ let pxtorem = require("postcss-pxtorem");
 
 let options = {
     propList: ["*"],
-    fallback: true,
+    fallback: true
 };
 let processors = [autoprefixer, pxtorem(options)];
 //let isProd = process.env.NODE_ENV === "production";

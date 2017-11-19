@@ -6,6 +6,7 @@ BULLES
     position: absolute;
     animation: blue__move 25s linear infinite;
     bottom: -30px;
+    z-index: -1;
 }
 
 .bubble__size1{
