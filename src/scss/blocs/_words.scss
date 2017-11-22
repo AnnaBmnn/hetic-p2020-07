@@ -13,12 +13,6 @@
     @include large {
         font-size: 60px;
     }
-}
-
-.words--optimiste {
-    position: relative;
-    color: $yellow;
-
     &:before {
         content: '';
         position: absolute;
@@ -34,6 +28,48 @@
             height: 100%;
             top: -20%;
         }
+    }
+}
+
+.words--optimiste {
+    position: relative;
+    color: $yellow;
+
+    &:before {
+        background-image: url('../img/parfumBlue.png');
+    }
+}
+
+.words--puissant {
+    position: relative;
+    color: $blue;
+
+    &:before {
+        background-image: url('../img/parfumBlue.png');
+    }
+}
+
+.words--energique {
+    position: relative;
+    color: $red;
+
+    &:before {
+        background-image: url('../img/parfumBlue.png');
+    }
+}
+
+.words--pur {
+    position: relative;
+    color: $green;
+
+    &:before {
+        background-image: url('../img/parfumBlue.png');
+    }
+}
+
+.words--intense {
+    &:before {
+        background-image: url('../img/parfumBlue.png');
     }
 }
 

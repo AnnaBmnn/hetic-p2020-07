@@ -20,6 +20,27 @@
     color: $white;
 }
 
+.smells--puissant {
+    background-color: $blue;
+    color: $white;
+}
+
+.smells--energique {
+    background-color: $red;
+    color: $white;
+}
+
+.smells--pur {
+    background-color: $white;
+    box-shadow: $boxShadow;
+    color: $black;
+}
+
+.smells--intense {
+    background-color: $black;
+    color: $white;
+}
+
 .smells__txt {
     display: inline-block;
     margin-bottom: 20px;
@@ -36,4 +57,11 @@
 
 .smells__btn {
     color: $red;
+}
+.smells__btn--puissant {
+    color: $yellow;
+}
+
+.smells__btn--energique {
+    color: $yellow;
 }
