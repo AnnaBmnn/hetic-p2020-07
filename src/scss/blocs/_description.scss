@@ -6,7 +6,6 @@
     background-color: $white;
     box-shadow: $boxShadow;
 
-
     @include medium {
         align-self: flex-end;
         order: 2;
@@ -30,6 +29,11 @@
     @include medium {
         transform: none;
     }
+}
+
+.description--pur {
+    background-color: $green;
+    color: $white;
 }
 
 .description__blockColor {
@@ -67,6 +71,42 @@
     @include medium {
         &:after {
             background-color: $yellow;
+        }
+    }    
+}
+
+.description__blockColor--puissant {
+    @include medium {
+        &:after {
+            background-color: $blue;
+        }
+    }    
+}
+
+.description__blockColor--energique {
+    @include medium {
+        &:after {
+            background-color: $red;
+        }
+    }    
+}
+
+.description__blockColor--pur {
+    @include medium {
+        &:after {
+            background-color: $white;
+            box-shadow: $boxShadow;
+        }
+        &:before {
+            background-color: $green;
+        }
+    }    
+}
+
+.description__blockColor--intense {
+    @include medium {
+        &:after {
+            background-color: $black;
         }
     }    
 }

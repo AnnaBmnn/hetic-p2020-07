@@ -68,6 +68,8 @@
 }
 
 .words--intense {
+    position: relative;
+    
     &:before {
         background-image: url('../img/parfumBlue.png');
     }
