@@ -1,7 +1,9 @@
 .words {
-    width: 60%;
-    align-self: flex-end;
+    align-self: flex-start;
+    display: flex;
+    align-items: baseline;
     margin: 40px 0 100px;
+    transform: translateX(-25%);
     @include font-settings($montserrat, 24px, 600);
 
     @include medium {
@@ -11,70 +13,36 @@
     }
 
     @include large {
-        font-size: 60px;
-    }
-    &:before {
-        content: '';
-        position: absolute;
-        top: 0%;
-        left: -100%;
-        display: block;
-        width: 150%;
-        height: 125%;
-        background-image: url('../img/parfumBlue.png');
-        background-repeat: no-repeat;
-        background-size: contain;
-        @include large {
-            height: 100%;
-            top: -20%;
-        }
+        font-size: 56px;
     }
 }
 
 .words--optimiste {
     position: relative;
     color: $yellow;
-
-    &:before {
-        background-image: url('../img/parfumBlue.png');
-    }
 }
 
 .words--puissant {
     position: relative;
     color: $blue;
-
-    &:before {
-        background-image: url('../img/parfumBlue.png');
-    }
 }
 
 .words--energique {
     position: relative;
     color: $red;
-
-    &:before {
-        background-image: url('../img/parfumBlue.png');
-    }
 }
 
 .words--pur {
     position: relative;
     color: $green;
-
-    &:before {
-        background-image: url('../img/parfumBlue.png');
-    }
 }
 
 .words--intense {
     position: relative;
-    
-    &:before {
-        background-image: url('../img/parfumBlue.png');
-    }
 }
-
+.words__flacon {
+    width: 50vw;
+}
 .words__word {
     margin: 20px 0;
     @include medium {
