@@ -17,7 +17,9 @@ body
                 | Une senteur masculine et fraîche qui se lie en un subtile accord de fougère. Cet arôme vivifiante caractérise son exellence.
 
         section.words.words--puissant
-            ul
+            div.words__flacon.js-paralax(data-speed='2.5')
+                img(src="../img/flaconBleu_750.png")(srcset="../img/flaconBleu_250.png 250w, ../img/flaconBleu_500.png 500w, ../img/flaconBleu_750.png 750w")(sizes="(min-width: 1024px) 50vw,(min-width: 768px) 50vw, 50vw")
+            ul.words__list
                 li.words__word
                     | Fraîcheur intense
                 li.words__word
@@ -30,10 +32,34 @@ body
                     | Vivifiant
 
         section.smells.smells--puissant.js-paralax(data-speed='0.9')
-            p.smells__txt
-                |  L’Eau de Lacoste Bleue affiche alors une odeur particulièrement aromatique, fraîche et vivifiante. 
+            div.js-toggle-content
+                p.smells__txt
+                    |  L’Eau de Lacoste Bleue affiche alors une odeur particulièrement aromatique, fraîche et vivifiante.
 
-            a.smells__btn.smells__btn--puissant(href="#")
+            div.js-toggle-content.hidden
+                div.smells__infos
+                    span.smells__title
+                        | FAMILLE OLFACTIVE - Aromatique, Fougère  
+
+                div.smells__infos
+                    span.smells__title
+                        | Note de tête
+                    span.smells__content
+                        | menthe poivrée, citron, pamplemousse
+
+                div.smells__infos
+                    span.smells__title
+                        | Note de coeur
+                    span.smells__content
+                        | fleur d’oranger, sauge, note d’air
+
+                div.smells__infos
+                    span.smells__title
+                        | Note de fond
+                    span.smells__content
+                        | ambre gris, patchouli, mousse de chêne
+
+            a.js-btn-toggle-content.smells__btn.smells__btn--puissant(href="#")
                 | Pyramide Olfactive
 
         section.quote.quote--up.quote--puissant.js-paralax(data-speed='2')

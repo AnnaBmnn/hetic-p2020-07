@@ -17,7 +17,9 @@ body
                 | Inspirée du célèbre polo Lacoste, vient enrichir la collection d'une autre déclinaison masculine énergique, aux notes épicées. 
 
         section.words.words--energique
-            ul
+            div.words__flacon.js-paralax(data-speed='2.5')
+                img(src="../img/flaconRouge_750.png")(srcset="../img/flaconRouge_250.png 250w, ../img/flaconRouge_500.png 500w, ../img/flaconRouge_750.png 750w")(sizes="(min-width: 1024px) 50vw,(min-width: 768px) 50vw, 50vw")
+            ul.words__list
                 li.words__word
                     | Energique
                 li.words__word
@@ -30,10 +32,33 @@ body
                     | Vitalité
 
         section.smells.smells--energique.js-paralax(data-speed='0.9')
-            p.smells__txt
-                | La couleur rouge du verre évoque l’énergie et la vitalité de cette composition boisée, épicée et fraîche. 
+            div.js-toggle-content
+                p.smells__txt
+                    | La couleur rouge du verre évoque l’énergie et la vitalité de cette composition boisée, épicée et fraîche. 
 
-            a.smells__btn.smells__btn--energique(href="#")
+            div.js-toggle-content.hidden
+                span.smells__title
+                    | FAMILLE OLFACTIVE - Boisé - Épicé
+
+                div.smells__infos
+                    span.smells__title
+                        | Note de tête
+                    span.smells__content
+                        | mangue, mandarine, orange, thé
+
+                div.smells__infos
+                    span.smells__title
+                        | Note de coeur
+                    span.smells__content
+                        | gingembre, cardamome, poivre noir
+
+                div.smells__infos
+                    span.smells__title
+                        | Note de fond
+                    span.smells__content
+                        | labdanum, ciste, benjoin            
+
+            a.smells__btn.smells__btn--energique(href="#").js-btn-toggle-content
                 | Pyramide Olfactive
 
         section.quote.quote--up.quote--energique.js-paralax(data-speed='2')
