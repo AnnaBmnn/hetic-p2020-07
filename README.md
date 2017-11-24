@@ -2,6 +2,8 @@
 
 Lacoste L.12.12 is a school project in order to practice front-end developpment.
 
+Link : [Netlify](https://usher-elaine-66547.netlify.com/)
+
 1. [Technologies](#technologies)
 2. [Installation](#installation)
 3. [Developpment](#developpment)
