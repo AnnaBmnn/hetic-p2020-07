@@ -1,14 +1,13 @@
 {
     "presets": [
-        ["env", {
-            "targets": {
-                "browsers": [
-                    "last 2 versions",
-                    "not ie < 11",
-                    "not Safari < 10",
-                    "iOS > 10"
-                ]
+        ["env", "es2015"]
+    ],
+    "plugins": [
+        "transform-regenerator",
+        [
+            "transform-runtime", {
+                "polyfill": false
             }
-        }]
+        ]
     ]
 }

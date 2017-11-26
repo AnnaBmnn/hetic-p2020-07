@@ -1,5 +1,8 @@
 let sourcemaps = require("gulp-sourcemaps");
 let babel = require("gulp-babel");
+let babelify = require("babelify");
+let browserify = require("browserify");
+let buffer = require("vinyl-buffer");
 let concat = require("gulp-concat");
 let del = require("del");
 let gulp = require("gulp");
@@ -14,6 +17,8 @@ let uglify = require("gulp-uglify");
 let postcss = require("gulp-postcss");
 let autoprefixer = require("autoprefixer");
 let pxtorem = require("postcss-pxtorem");
+let mergeStream = require("merge-stream");
+require("babel-polyfill");
 
 let options = {
     propList: ["*"],
@@ -54,12 +59,15 @@ function scss() {
  */
 
 function js() {
-    return gulp.src("src/**/*.js")
-        .pipe(sourcemaps.init())
-        .pipe(babel())
-        .pipe(concat("script.js"))
-        .pipe(sourcemaps.write("."))
-        .pipe(gulp.dest("dist"));
+    return browserify({entries: ["src/js/script.js", "src/js/scroll.js"], debug: true})
+        .transform(babelify)
+        .bundle()
+        .pipe(source("script.js"))
+        .pipe(buffer())
+        .pipe(gulpif(!isProd, sourcemaps.init({loadMaps: true})))
+        .pipe(gulpif(!isProd, sourcemaps.write(".")))
+        .pipe(gulp.dest("dist/js"))
+        .pipe(sync.stream());
 }
 
 /**
