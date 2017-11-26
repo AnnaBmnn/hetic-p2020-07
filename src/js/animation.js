@@ -1,6 +1,6 @@
 //get all the div with the paralax animation
-const divParalaxArray = document.querySelectorAll('.js-paralax')
-const paralaxArray = []
+let divParalaxArray = document.querySelectorAll('.js-paralax')
+let paralaxArray = []
 
 //class for the paralax animation
 class Paralax {
@@ -26,3 +26,4 @@ window.addEventListener('scroll', function(){
         paralax.animate(this.scrollY)
     })
 });
+

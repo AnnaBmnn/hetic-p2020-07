@@ -1,0 +1,74 @@
+include ../partials/header.pug
+
+body
+    .container
+        section.titles.titles--puissant.js-paralax(data-speed='6')
+            h1.titles__title
+                | Puissant
+            span.titles__subtitle
+                | Eau de Parfum - L. 12. 12.
+
+        section.description.description--up.description--puissant.js-paralax(data-speed='2')
+            div.description__blockColor.description__blockColor--puissant
+            
+            p.description__txt
+                | Symbole de la masculité par excellence !
+            p.description__txt
+                | Une senteur masculine et fraîche qui se lie en un subtile accord de fougère. Cet arôme vivifiante caractérise son exellence.
+
+        section.words.words--puissant
+            div.words__flacon.js-paralax(data-speed='2.5')
+                img(src="../img/flaconBleu_750.png")(srcset="../img/flaconBleu_250.png 250w, ../img/flaconBleu_500.png 500w, ../img/flaconBleu_750.png 750w")(sizes="(min-width: 1024px) 50vw,(min-width: 768px) 50vw, 50vw")
+            ul.words__list
+                li.words__word
+                    | Fraîcheur intense
+                li.words__word
+                    | Luminosité
+                li.words__word
+                    | Virilité
+                li.words__word
+                    | Aromatique
+                li.words__word.words__word--important
+                    | Vivifiant
+
+        section.smells.smells--puissant.js-paralax(data-speed='0.9')
+            div.js-toggle-content
+                p.smells__txt
+                    |  L’Eau de Lacoste Bleue affiche alors une odeur particulièrement aromatique, fraîche et vivifiante.
+
+            div.js-toggle-content.hidden
+                div.smells__infos
+                    span.smells__title
+                        | FAMILLE OLFACTIVE - Aromatique, Fougère  
+
+                div.smells__infos
+                    span.smells__title
+                        | Note de tête
+                    span.smells__content
+                        | menthe poivrée, citron, pamplemousse
+
+                div.smells__infos
+                    span.smells__title
+                        | Note de coeur
+                    span.smells__content
+                        | fleur d’oranger, sauge, note d’air
+
+                div.smells__infos
+                    span.smells__title
+                        | Note de fond
+                    span.smells__content
+                        | ambre gris, patchouli, mousse de chêne
+
+            a.js-btn-toggle-content.smells__btn.smells__btn--puissant(href="#")
+                | Pyramide Olfactive
+
+        section.quote.quote--up.quote--puissant.js-paralax(data-speed='2')
+            blockquote.quote__txt
+                p
+                    | " La révélation d'une nouveauté en accord avec les traditions. "
+            span.quote__author
+                | Lacoste
+
+        include ../partials/footerParfum.pug
+        
+include ../partials/footer.pug

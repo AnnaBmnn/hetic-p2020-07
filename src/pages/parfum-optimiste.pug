@@ -17,7 +17,9 @@ body
                 | Jaune est un concentré de bonheur et de joie. En effet nulle couleur n'est plus joyeuse que le jaune : c'est la couleur du soleil, de la fête et de la joie.
 
         section.words.words--optimiste
-            ul
+            div.words__flacon.js-paralax(data-speed='2.5')
+                img(src="../img/flaconJaune_750.png")(srcset="../img/flaconJaune_250.png 250w, ../img/flaconJaune_500.png 500w, ../img/flaconJaune_750.png 750w")(sizes="(min-width: 1024px) 50vw,(min-width: 768px) 50vw, 50vw")
+            ul.words__list
                 li.words__word
                     | Joyeux
                 li.words__word
@@ -30,9 +32,34 @@ body
                     | Explosif
 
         section.smells.smells--optimiste.js-paralax(data-speed='0.9')
-            p.smells__txt
-                | Un parfum dynamisant pour les gentleman-sportif qui contient du pamplemousse associé à un accord tonique et effervescent.
-            a.smells__btn(href="#")
+            div.js-toggle-content
+                p.smells__txt
+                    | Un parfum dynamisant pour les gentleman-sportif qui contient du pamplemousse associé à un accord tonique et effervescent.
+
+            div.js-toggle-content.hidden
+                div.smells__infos
+                    span.smells__title
+                        | FAMILLE OLFACTIVE - Hespéridé et Boisé 
+
+                div.smells__infos
+                    span.smells__title
+                        | Note de tête
+                    span.smells__content
+                        | pomelo 
+
+                div.smells__infos
+                    span.smells__title
+                        | Note de coeur
+                    span.smells__content
+                        | pomme 
+
+                div.smells__infos
+                    span.smells__title
+                        | Note de fond
+                    span.smells__content
+                        | cyprès , ambre, vétiver  
+
+            a.js-btn-toggle-content.smells__btn(href="#")
                 | Pyramide Olfactive
 
         section.quote.quote--up.quote--optimiste.js-paralax(data-speed='2')

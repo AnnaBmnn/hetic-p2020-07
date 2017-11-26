@@ -1,0 +1,80 @@
+include ../partials/header.pug
+
+body
+    .container
+        section.titles.titles--intense.js-paralax(data-speed='6')
+            h1.titles__title
+                | Intense
+            span.titles__subtitle
+                | Eau de Parfum - L. 12. 12.
+
+        section.description.description--up.description--intense.js-paralax(data-speed='2')
+            div.description__blockColor.description__blockColor--intense
+            p.description__txt
+                | Un parfum longue durée, intensément Lacoste !
+
+            p.description__txt
+                | Noir apporte une nouvelle dimension à la collection de parfums et offre à l'homme un ensemble complet.
+            div.description__decoration.description__decoration--intense
+                img(src="../img/pasteque_750.png")(srcset="../img/pasteque_250.png 250w, ../img/pasteque_500.png 500w, ../img/pasteque_750.png 750w")(sizes="(min-width: 1024px) 20vw,(min-width: 768px) 50vw, 50vw")
+
+        section.words.words--intense
+            div.words__flacon.js-paralax(data-speed='2.5')
+                img(src="../img/flaconNoir_750.png")(srcset="../img/flaconNoir_250.png 250w, ../img/flaconNoir_500.png 500w, ../img/flaconNoir_750.png 750w")(sizes="(min-width: 1024px) 50vw,(min-width: 768px) 50vw, 50vw")
+            ul.words__list
+                li.words__word
+                    | Elegance
+                li.words__word
+                    | Audace
+                li.words__word
+                    | Soirée
+                li.words__word
+                    | Harmonie
+                li.words__word.words__word--important
+                    | Soirée d'été
+
+        section.smells.smells--intense.js-paralax(data-speed='0.9')
+            div.js-toggle-content
+                p.smells__txt
+                    | Pour les 80 ans de la marque au crocodile, c’est donc un parfum plus mystérieux et boisé qui vient enrichir la collection directement inspirée du célèbre polo L.12.12 Lacoste.
+
+            div.js-toggle-content.hidden
+                div.smells__infos
+                    span.smells__title
+                        | FAMILLE OLFACTIVE - hespéridé  et aromatique
+
+                div.smells__infos
+                    span.smells__title
+                        | Note de tête
+                    span.smells__content
+                        | pastèque, basilic
+
+                div.smells__infos
+                    span.smells__title
+                        | Note de coeur
+                    span.smells__content
+                        | lavande, verveine
+
+                div.smells__infos
+                    span.smells__title
+                        | Note de fond
+                    span.smells__content
+                        | patchouli, cashmeran, coumarine, chocolat
+
+            a.js-btn-toggle-content.smells__btn(href="#")
+                | Pyramide Olfactive
+
+        section.quote.quote--up.quote--intense.js-paralax(data-speed='2')
+            blockquote.quote__txt
+                p
+                    | " Passez du jour à la nuit en changeant de parfum. " 
+            span.quote__author
+                | Lacoste
+
+        section.texte.texte--intense
+            p.texte__txt
+                | Habillez votre peau d'une senteur intense et rafraîchissante, évoquant les chaudes soirées d'été.
+
+        include ../partials/footerParfum.pug
+        
+include ../partials/footer.pug
