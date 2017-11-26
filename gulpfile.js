@@ -1,6 +1,5 @@
-let babelify = require("babelify");
-let browserify = require("browserify");
-let buffer = require("vinyl-buffer");
+let sourcemaps = require("gulp-sourcemaps");
+let babel = require("gulp-babel");
 let concat = require("gulp-concat");
 let del = require("del");
 let gulp = require("gulp");
@@ -10,7 +9,6 @@ let minifyCSS = require("gulp-csso");
 let pug = require("gulp-pug");
 let sass = require("gulp-sass");
 let source = require("vinyl-source-stream");
-let sourcemaps = require("gulp-sourcemaps");
 let sync = require("browser-sync").create();
 let uglify = require("gulp-uglify");
 let postcss = require("gulp-postcss");
@@ -56,15 +54,12 @@ function scss() {
  */
 
 function js() {
-  return browserify({entries: ["src/js/scroll.js", "src/js/script.js"], debug: true})
-    .transform(babelify, {presets: "es2015"})
-    .bundle()
-    .pipe(source("script.js"))
-    .pipe(buffer())
-    .pipe(gulpif(!isProd, sourcemaps.init({loadMaps: true})))
-    .pipe(gulpif(!isProd, sourcemaps.write(".")))
-    .pipe(gulp.dest("dist/js"))
-    .pipe(sync.stream());
+    return gulp.src("src/**/*.js")
+        .pipe(sourcemaps.init())
+        .pipe(babel())
+        .pipe(concat("script.js"))
+        .pipe(sourcemaps.write("."))
+        .pipe(gulp.dest("dist"));
 }
 
 /**
