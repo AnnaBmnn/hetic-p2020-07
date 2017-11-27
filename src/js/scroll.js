@@ -1,25 +1,27 @@
 "use strict";
 
 let OSName="Unknown OS";
-if (navigator.appVersion.indexOf("Win")  !== -1) {
+if (navigator.appVersion.indexOf("Win") !== -1) {
     OSName = "Windows";
-}  else if (navigator.appVersion.indexOf("Mac")  !== -1)
-{
+} else if (navigator.appVersion.indexOf("Mac") !== -1) {
     OSName = "MacOS";
-}  else if (navigator.appVersion.indexOf("X11")  !== -1)
-{
+} else if (navigator.appVersion.indexOf("X11") !== -1) {
     OSName = "UNIX";
-} else if (navigator.appVersion.indexOf("Linux") !== -1)
-{
+}else if (navigator.appVersion.indexOf("Linux") !== -1) {
     OSName = "Linux";
 }
 
-let theDiv      = document.getElementById("wrapper");
-let clientWidth = document.getElementById("body").clientWidth;
+let clientWidth = 0;
+let theDiv = document.getElementById("wrapper");
+
+if (document.getElementById("indexBody") !== null)
+{
+    let clientWidth = document.getElementById("indexBody").clientWidth;
+}
 
 let translateAllowed    = true;
 let actualPos           = 0;
-let maxTranslate        = theDiv.scrollWidth - clientWidth;
+
 let xDown               = null;
 let yDown               = null;
 
@@ -28,22 +30,18 @@ if (OSName === "MacOS")
 {
     scrollSpeed = 1;
 }
-
-/* EVENT LISTENERS */
-
-document.addEventListener("touchstart", handleTouchStart,   false);
-document.addEventListener("touchmove",  handleTouchMove,    false);
-document.addEventListener("wheel",      handleScroll,       true) ;
-document.addEventListener("resize",     handleResize,       true) ;
-
-/* MOUVEMENTS */
+let maxTranslate;
+if (theDiv !== null)
+{
+    maxTranslate    = theDiv.scrollWidth - clientWidth;
+}
 
 function goToLeft(varTrans, smooth = false) {
     if (typeof varTrans !== "undefined")
     {
         actualPos += varTrans;
     } else {
-        actualPos += document.getElementById("body").clientWidth;
+        actualPos += document.getElementById("indexBody").clientWidth;
     }
     if ( actualPos < 0)
     {
@@ -66,7 +64,7 @@ function goToRight(varTrans, smooth = false) {
     {
         actualPos += varTrans;
     } else {
-        actualPos -= document.getElementById("body").clientWidth;
+        actualPos -= document.getElementById("indexBody").clientWidth;
     }
     if ( actualPos < 0)
     {
@@ -159,7 +157,7 @@ async function handleTouchMove(e) {
 
 async function handleResize() {
     await sleep(500);
-    maxTranslate = document.getElementById("wrapper").scrollWidth - document.getElementById("body").clientWidth;
+    maxTranslate = document.getElementById("wrapper").scrollWidth - document.getElementById("indexBody").clientWidth;
     if ( actualPos < 0)
     {
         actualPos = 0;
@@ -174,4 +172,13 @@ async function handleResize() {
 /* SLEEP */
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+
+if (theDiv !== null ) {
+    /* EVENT LISTENERS */
+    document.addEventListener("touchstart", handleTouchStart,   false);
+    document.addEventListener("touchmove",  handleTouchMove,    false);
+    document.addEventListener("wheel",      handleScroll,       true) ;
+    document.addEventListener("resize",     handleResize,       true) ;
 }
