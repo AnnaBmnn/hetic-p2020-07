@@ -59,7 +59,7 @@ function scss() {
  */
 
 function js() {
-    return browserify({entries: ["src/js/script.js", "src/js/scroll.js"], debug: true})
+    return browserify({entries: ["src/js/script.js", "src/js/scroll.js", "src/js/animation.js", "src/js/toggleContent.js"], debug: true})
         .transform(babelify)
         .bundle()
         .pipe(source("script.js"))
