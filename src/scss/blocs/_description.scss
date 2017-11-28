@@ -110,7 +110,45 @@
         }
     }    
 }
+.description__decoration {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 50vw;
+    height: auto;
 
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+.description__decoration--intense {
+    transform: translateX(35%) translateY(-20%);
+    @include medium {
+        max-width: 300px;
+        width: 30vw;
+        z-index: 20;
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+.description__decoration--energique {
+    transform: translateX(55%) translateY(-45%) rotateZ(-40deg);
+    @include medium {
+        max-width: 300px;
+        width: 20vw;
+        z-index: 20;
+    }
+    @include large {
+        transform: translateX(90%) translateY(-45%) rotateZ(-40deg);
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
 .description__txt {
     position: relative;
     z-index: 20;

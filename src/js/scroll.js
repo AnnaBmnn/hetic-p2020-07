@@ -15,26 +15,26 @@ if (navigator.appVersion.indexOf("Win")  !== -1) {
 }
 
 let theDiv      = document.getElementById("wrapper");
-let clientWidth = document.getElementById("body").clientWidth;
+//let clientWidth = document.getElementById("body").clientWidth;
 
-let translateAllowed    = true;
-let actualPos           = 0;
-let maxTranslate        = theDiv.scrollWidth - clientWidth;
-let xDown               = null;
-let yDown               = null;
+// let translateAllowed    = true;
+// let actualPos           = 0;
+// let maxTranslate        = theDiv.scrollWidth - clientWidth;
+// let xDown               = null;
+// let yDown               = null;
 
-let scrollSpeed         = 60;
-if (OSName === "MacOS")
-{
-    scrollSpeed = 1;
-}
+// let scrollSpeed         = 60;
+// if (OSName === "MacOS")
+// {
+//     scrollSpeed = 1;
+// }
 
-/* EVENT LISTENERS */
+//  EVENT LISTENERS 
 
-document.addEventListener("touchstart", handleTouchStart,   false);
-document.addEventListener("touchmove",  handleTouchMove,    false);
-document.addEventListener("wheel",      handleScroll,       true) ;
-document.addEventListener("resize",     handleResize,       true) ;
+// document.addEventListener("touchstart", handleTouchStart,   false);
+// document.addEventListener("touchmove",  handleTouchMove,    false);
+// document.addEventListener("wheel",      handleScroll,       true) ;
+// document.addEventListener("resize",     handleResize,       true) ;
 
 /* MOUVEMENTS */
 

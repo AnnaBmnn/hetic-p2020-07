@@ -29,8 +29,12 @@
 }
 
 .smells--puissant {
+    margin-bottom: 15vw;
     background-color: $blue;
     color: $white;
+    @include medium {
+        margin-bottom: 0;
+    }
 }
 
 .smells--energique {
@@ -42,6 +46,9 @@
     background-color: $white;
     box-shadow: $boxShadow;
     color: $black;
+    @include medium {
+        order: 4;
+    }
 }
 
 .smells--intense {

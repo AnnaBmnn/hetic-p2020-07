@@ -94,3 +94,24 @@
         font-size: 24px;
     } 
 }
+
+.titles__img {
+    position: absolute;
+    left: 80%;
+    top: 35%;
+    width: 30vw;
+    height: auto;
+    @include medium {
+        left: 110%;
+        top: 60%;
+        width: 20vw;
+    }
+    @include large {
+        width: 15vw;
+        max-width: 250px;
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+}

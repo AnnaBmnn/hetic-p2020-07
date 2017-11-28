@@ -41,7 +41,15 @@
     position: relative;
 }
 .words__flacon {
-    width: 50vw;
+    width: 60vw;
+    max-width: 500px;
+    @include medium {
+        width: 50vw;
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
 }
 .words__word {
     margin: 20px 0;

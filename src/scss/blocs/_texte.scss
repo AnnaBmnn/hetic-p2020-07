@@ -1,5 +1,5 @@
 .texte {
-    z-index: -10;
+    z-index: 20;
     align-self: flex-start;      
     width: 70%;
     margin-top: 60px;
@@ -33,9 +33,33 @@
 }
 
 .texte--pur {
+    position: relative;
+    margin-top: 5vw;
     background-color: $white;
     box-shadow: $boxShadow;
     color: $black;
+    @include medium {
+        align-self: flex-end;
+    }
+    &:after {
+        content: url('../img/balleBlanche_240.png');
+        position: absolute;
+        bottom: 85%;
+        left: 60%;
+        display: block;
+        height: auto;
+        width: 100%;
+        transform: scale(0.7) rotateZ(90deg);
+        @include medium {
+            left: -55%;
+            bottom: 60%;
+        }
+        @include large {
+            left: -55%;
+            bottom: 40%;
+            transform: scale(0.7) rotateZ(90deg);
+        }
+    }
 }
 
 .texte--intense {

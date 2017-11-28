@@ -2,7 +2,7 @@
     align-self: flex-start;
     width: 85%;
     position: relative;
-    padding: 80px 40px;
+    padding: 60px 40px;
     background-color: $white;
     box-shadow: $boxShadow;
     @include medium {
@@ -39,7 +39,56 @@
         }
     }
 }
+.quote--energique {
+    margin-top: 30vw;
+    &:before {
+        content: url('../img/croco_seeds_400.png');
+        position: absolute;
+        top: -100%;
+        left: -20%;
+        display: block;
+        height: auto;
+        width: 70%;
+        max-width: 400px;
+        transform: scale(0.6);
+    }    
+}
+.quote--puissant {
+    margin-top: 30vw;
 
+    @include medium {
+        margin-top: 10vh;
+    }
+    &:before {
+        content: url('../img/blueberry_440.png');
+        position: absolute;
+        top: -90%;
+        left: -60%;
+        z-index: -10;
+        display: block;
+        height: auto;
+        max-width: 440px;
+        transform: scale(0.5);
+    }    
+}
+.quote--intense {
+    &:after {
+        content: url('../img/chocolate_300.png');
+        position: absolute;
+        top: 100%;
+        left: 60%;
+        display: block;
+        height: auto;
+        width: 70%;
+        transform: translate3d(0%, -50%, 0);
+        @include medium {
+            left: -40%;
+        }
+        @include large {
+            left: -40%;
+        }
+    }
+}
 .quote--pur {
     background-color: $green;
     color: $white;
