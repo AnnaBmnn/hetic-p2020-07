@@ -135,14 +135,21 @@
     }
 }
 .description__decoration--energique {
-    transform: translateX(55%) translateY(-45%) rotateZ(-40deg);
+    top: -5%;
+    left: 90%;
+    transform-origin: 100% 100%;
+    animation: rotateFern 3s alternate-reverse ease-in-out infinite;
+
     @include medium {
+        left: 95%;
+        top: 25%;
         max-width: 300px;
-        width: 20vw;
+        width: 30vw;
         z-index: 20;
     }
     @include large {
-        transform: translateX(90%) translateY(-45%) rotateZ(-40deg);
+        top: 0%;
+        left: 110%;
     }
     img {
         width: 100%;

@@ -4,6 +4,15 @@
     }
 }
 
+@keyframes rotateFern {
+    0% {
+        transform: rotateZ(-38deg);
+    }
+    100% {
+        transform: rotateZ(-42deg);
+    }
+}
+
 @keyframes chocolat1 {
     100%{transform: translate3d(0, 110vh, 0) rotate(-40deg);}
 }
