@@ -83,7 +83,7 @@ body#indexBody
                     .parfum-black__chocolates
                         - var i = 1
                         each val in [1, 2, 1, 1, 2, 2, 1, 2]
-                            img(src="../img/chocolat-" + val + ".png", alt="", class="chocolat-" + i )
+                            img(src="../img/chocolate_" + val + ".png", alt="", class="chocolat-" + i )
                             - i++
                     .parfum-black__container
                         p.parfum-black__name
@@ -96,15 +96,15 @@ body#indexBody
                 .presentation-menu__container
                     ul.menu__container
                         li
-                            a.yellow(href="#") Optimiste
+                            a.yellow(href="./parfum-optimiste.html") Optimiste
                         li
-                            a.blue(href="#")   Puissant
+                            a.blue(href="./parfum-puissant.html")    Puissant
                         li
-                            a.red(href="#")    Energique
+                            a.red(href="./parfum-energique.html")    Energique
                         li
-                            a.green(href="#")  Pur
+                            a.green(href="./parfum-pur.html")        Pur
                         li
-                            a.black(href="#")  Intense
+                            a.black(href="./parfum-intense.html")    Intense
 
 include ../partials/footer.pug
 

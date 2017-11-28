@@ -21,15 +21,15 @@ if (document.getElementById("indexBody") !== null)
 
 let translateAllowed    = true;
 let actualPos           = 0;
-
 let xDown               = null;
 let yDown               = null;
-
 let scrollSpeed         = 70;
+
 if (OSName === "MacOS")
 {
     scrollSpeed = 1;
 }
+
 let maxTranslate;
 if (theDiv !== null)
 {
@@ -37,21 +37,18 @@ if (theDiv !== null)
 }
 
 function goToLeft(varTrans, smooth = false) {
-    if (typeof varTrans !== "undefined")
-    {
-        actualPos += varTrans;
+    if (typeof varTrans !== "undefined") {
+        actualPos += Math.min(varTrans, 200);
     } else {
         actualPos += document.getElementById("indexBody").clientWidth;
     }
-    if ( actualPos < 0)
-    {
+    if ( actualPos < 0) {
         actualPos = 0;
-    } else if (actualPos > maxTranslate )
-    {
+    } else if (actualPos > maxTranslate ) {
         actualPos = maxTranslate;
     }
-    if (smooth)
-    {
+
+    if (smooth === true) {
         theDiv.style.transition = "all 0.3s ease";
     } else {
         theDiv.style.transition = "";
@@ -60,26 +57,25 @@ function goToLeft(varTrans, smooth = false) {
 }
 
 function goToRight(varTrans, smooth = false) {
-    if (typeof varTrans !== "undefined")
-    {
-        actualPos += varTrans;
+    if (typeof varTrans !== "undefined") {
+        actualPos += Math.max(varTrans, -200);
     } else {
         actualPos -= document.getElementById("indexBody").clientWidth;
     }
-    if ( actualPos < 0)
-    {
+
+    if ( actualPos < 0) {
         actualPos = 0;
-    } else if (actualPos > maxTranslate )
-    {
+    } else if (actualPos > maxTranslate ) {
         actualPos = maxTranslate;
     }
-    if (smooth)
-    {
+
+    if (smooth === true) {
         theDiv.style.transition = "all 0.3s ease";
     } else {
         theDiv.style.transition = "";
     }
     theDiv.style.transform  = "translateX(-" + actualPos + "px)";
+    console.log();
 }
 
 /* HANDLE SCROLL */
@@ -174,9 +170,8 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-
+/* EVENT LISTENERS */
 if (theDiv !== null ) {
-    /* EVENT LISTENERS */
     document.addEventListener("touchstart", handleTouchStart,   false);
     document.addEventListener("touchmove",  handleTouchMove,    false);
     document.addEventListener("wheel",      handleScroll,       true) ;
