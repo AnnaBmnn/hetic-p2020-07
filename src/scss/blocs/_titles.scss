@@ -4,6 +4,7 @@
     padding: 40px 40px 100px;
     color: $white;
     box-shadow: $boxShadow;
+    transform: translate3d(0,0,0);
 
     @include medium {
         order: 1;
@@ -101,6 +102,8 @@
     top: 35%;
     width: 30vw;
     height: auto;
+    transform: translate3d(0,0,0);
+
     @include medium {
         left: 110%;
         top: 60%;
