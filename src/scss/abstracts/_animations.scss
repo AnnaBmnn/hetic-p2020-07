@@ -6,3 +6,12 @@
         transform: translateX(-5px);
     }
 }
+
+@keyframes rotateFern {
+    0% {
+        transform: rotateZ(-38deg);
+    }
+    100% {
+        transform: rotateZ(-42deg);
+    }
+}
