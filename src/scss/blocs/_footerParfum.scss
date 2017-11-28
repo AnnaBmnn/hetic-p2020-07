@@ -2,8 +2,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 30;
     width: 80%;
-    //REVOIR MARGIN
     margin: 0 auto;
     padding: 40px 0;
     background-color: $white;

@@ -9,15 +9,16 @@
 @import 'abstracts/_mixins';
 @import 'abstracts/_animations';
 
-@import 'blocs/_header';
-@import 'blocs/_footer';
-@import 'blocs/_titles';
-@import 'blocs/_quote';
-@import 'blocs/_description';
-@import 'blocs/_texte';
-@import 'blocs/_smells';
-@import 'blocs/_words';
-@import 'blocs/_footerParfum';
+@import 'blocs/header';
+@import 'blocs/footer';
+@import 'blocs/titles';
+@import 'blocs/quote';
+@import 'blocs/flask';
+@import 'blocs/description';
+@import 'blocs/texte';
+@import 'blocs/smells';
+@import 'blocs/words';
+@import 'blocs/footerParfum';
 
 @import 'pages/home';
 @import 'pages/product';

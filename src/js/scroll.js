@@ -30,11 +30,7 @@ if (OSName === "MacOS")
     scrollSpeed = 1;
 }
 
-let maxTranslate;
-if (theDiv !== null)
-{
-    maxTranslate    = theDiv.scrollWidth - clientWidth;
-}
+/* EVENT LISTENERS */
 
 function goToLeft(varTrans, smooth = false) {
     if (typeof varTrans !== "undefined") {
