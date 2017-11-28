@@ -72,7 +72,7 @@
     z-index: 20;
     color: $red;
     &:before {
-        content: url(../img/right-arrow.svg);
+        content: url(../img/right_arrow.svg);
         display: inline-block;
         width: 20px;
         height: 5px;
@@ -83,10 +83,16 @@
 }
 .smells__btn--puissant {
     color: $yellow;
+    &:before {
+        content: url(../img/right_arrow_yellow.svg);
+    }
 }
 
 .smells__btn--energique {
     color: $yellow;
+    &:before {
+        content: url(../img/right_arrow_yellow.svg);
+    }
 }
 .smells__infos {
     margin: 20px 0;
