@@ -18,6 +18,14 @@ html {
     font-weight: 600;
 }
 
-.hidden {
-	display: none;
+.fade-out {
+    display: none;
+    animation: fade-out 0.2s ease-in forwards;
+}
+.fade-in {
+    opacity: 0;
+    animation: fade-in 0.3s 0.2s ease-in forwards ;    
+}
+.js-paralax {
+    will-change: transform;
 }
