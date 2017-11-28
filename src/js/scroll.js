@@ -16,7 +16,13 @@ let theDiv = document.getElementById("wrapper");
 
 if (document.getElementById("indexBody") !== null)
 {
-    let clientWidth = document.getElementById("indexBody").clientWidth;
+    clientWidth = document.getElementById("indexBody").clientWidth;
+}
+
+let maxTranslate;
+if (theDiv !== null)
+{
+    maxTranslate    = theDiv.scrollWidth - clientWidth;
 }
 
 let translateAllowed    = true;
