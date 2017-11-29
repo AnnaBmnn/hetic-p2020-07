@@ -1,13 +1,13 @@
-@import 'base/_reset';
-@import 'base/_general';
-@import 'base/_fonts';
+@import 'base/reset';
+@import 'base/general';
+@import 'base/fonts';
 
-@import 'abstracts/_colors';
-@import 'abstracts/_fonts';
-@import 'abstracts/_shadows';
-@import 'abstracts/_medias';
-@import 'abstracts/_mixins';
-@import 'abstracts/_animations';
+@import 'abstracts/colors';
+@import 'abstracts/fonts';
+@import 'abstracts/shadows';
+@import 'abstracts/medias';
+@import 'abstracts/mixins';
+@import 'abstracts/animations';
 
 @import 'blocs/header';
 @import 'blocs/footer';
