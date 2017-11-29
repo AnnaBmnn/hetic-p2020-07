@@ -1,0 +1,62 @@
+.words {
+    align-self: flex-start;
+    display: flex;
+    align-items: baseline;
+    margin: 40px 0 100px;
+    transform: translateX(-25%);
+    @include font-settings($montserrat, 24px, 600);
+
+    @include medium {
+        order: 3;
+        font-size: 48px;
+        font-weight: 900;
+    }
+
+    @include large {
+        font-size: 56px;
+    }
+}
+
+.words--optimiste {
+    position: relative;
+    color: $yellow;
+}
+
+.words--puissant {
+    position: relative;
+    color: $blue;
+}
+
+.words--energique {
+    position: relative;
+    color: $red;
+}
+
+.words--pur {
+    position: relative;
+    color: $green;
+}
+
+.words--intense {
+    position: relative;
+}
+.words__flacon {
+    width: 60vw;
+    max-width: 500px;
+    @include medium {
+        width: 50vw;
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+.words__word {
+    margin: 20px 0;
+    @include medium {
+        margin: 30px;
+    }
+}
+.words__word--important {
+    font-weight: 900;
+}

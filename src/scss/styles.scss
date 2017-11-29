@@ -1,14 +1,24 @@
-@import 'base/reset';
-@import 'base/general';
+@import 'base/_reset';
+@import 'base/_general';
+@import 'base/_fonts';
 
-@import 'abstracts/colors';
-@import 'abstracts/fonts';
-@import 'abstracts/medias';
-@import 'abstracts/mixins';
-@import 'abstracts/animations';
+@import 'abstracts/_colors';
+@import 'abstracts/_fonts';
+@import 'abstracts/_shadows';
+@import 'abstracts/_medias';
+@import 'abstracts/_mixins';
+@import 'abstracts/_animations';
 
 @import 'blocs/header';
 @import 'blocs/footer';
+@import 'blocs/titles';
+@import 'blocs/quote';
+@import 'blocs/flask';
+@import 'blocs/description';
+@import 'blocs/texte';
+@import 'blocs/smells';
+@import 'blocs/words';
+@import 'blocs/footerParfum';
 
 @import 'pages/home';
 @import 'pages/product';

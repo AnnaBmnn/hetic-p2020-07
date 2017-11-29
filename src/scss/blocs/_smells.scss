@@ -1,0 +1,108 @@
+.smells {
+    align-self: flex-end;
+    z-index: 0;
+    width: 70%;
+    padding: 40px 40px 80px;
+    transition: width 0.3s ease-in-out;
+    will-change: width;
+
+    @include medium {
+        order: 5;
+        width: 50%;
+        padding: 60px 40px;
+    }
+    @include large {
+        padding: 80px 40px;
+    }
+}
+.smells--bigger {
+    width: 100%;
+    transition: width 0.3s ease-in-out;
+
+    @include medium {
+        width: 65%;
+    }
+}
+.smells--optimiste {
+    background-color: $yellow;
+    color: $white;
+}
+
+.smells--puissant {
+    margin-bottom: 15vw;
+    background-color: $blue;
+    color: $white;
+    @include medium {
+        margin-bottom: 0;
+    }
+}
+
+.smells--energique {
+    background-color: $red;
+    color: $white;
+}
+
+.smells--pur {
+    background-color: $white;
+    box-shadow: $boxShadow;
+    color: $black;
+    @include medium {
+        order: 4;
+    }
+}
+
+.smells--intense {
+    background-color: $black;
+    color: $white;
+}
+
+.smells__txt {
+    display: inline-block;
+    margin-bottom: 20px;
+    line-height: 1.25;
+    @include font-settings($roboto, 16px, 500); 
+    @include medium {
+        font-size: 20px;
+    }    
+}
+
+.smells__btn {
+    position: relative;
+    margin: 20px 0;
+    z-index: 20;
+    color: $red;
+    &:before {
+        content: url(../img/right_arrow.svg);
+        display: inline-block;
+        width: 20px;
+        height: 5px;
+        margin: 0 5px; 
+        transform-origin: left;
+        animation: translate 0.8s alternate-reverse ease-out infinite;
+    }
+}
+.smells__btn--puissant {
+    color: $yellow;
+    &:before {
+        content: url(../img/right_arrow_yellow.svg);
+    }
+}
+
+.smells__btn--energique {
+    color: $yellow;
+    &:before {
+        content: url(../img/right_arrow_yellow.svg);
+    }
+}
+.smells__infos {
+    margin: 20px 0;
+}
+.smells__title {
+    display: block;
+    @include font-settings($roboto, 16px, 100);
+}
+.smells__content {
+    display: block;
+    margin-top: 10px;
+    @include font-settings($roboto, 16px, 700);
+}

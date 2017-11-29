@@ -10,10 +10,13 @@
 }
 
 @include font-face(Montserrat, Monserrat-SemiBold, semi-bold, normal);
-@include font-face(Montserrat, Monserrat-Bold, bold, normal);
-@include font-face(Montserrat, Monserrat-Black, black, normal);
+@include font-face(Montserrat, Montserrat-Bold, bold, normal);
+@include font-face(Montserrat, Montserrat-Black, black, normal);
 @include font-face(Roboto, Roboto-Light, light, normal);
 @include font-face(Roboto, Roboto-Medium, medium, normal);
 @include font-face(Roboto, Roboto-Regular, regular, normal);
+@include font-face(fontello, fontello, normal, normal);
 
-// supprimer format ttf?
+$montserrat: 'Montserrat', sans-serif;
+$roboto: 'Roboto', sans-serif;
+

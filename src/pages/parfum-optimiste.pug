@@ -1,0 +1,80 @@
+include ../partials/header.pug
+
+body
+    .container
+        section.titles.titles--optimiste.js-paralax(data-speed='6')
+            h1.titles__title
+                | Optimiste
+            span.titles__subtitle
+                | Eau de Parfum - L. 12. 12.
+            div.titles__img
+                img(src="../img/tennis_ball.png")
+
+        section.description.description--up.description--optimiste.js-paralax(data-speed='2')
+            div.description__blockColor.description__blockColor--optimiste
+            
+            p.description__txt
+                | La senteur épicée de l’Eau de Lacoste Jaune ! Habillez votre peau d'une senteur légère et pétillante.
+            p.description__txt
+                | Jaune est un concentré de bonheur et de joie. En effet nulle couleur n'est plus joyeuse que le jaune : c'est la couleur du soleil, de la fête et de la joie.
+
+        section.words.words--optimiste
+            div.words__flacon.js-paralax(data-speed='2.5')
+                img(src="../img/perfume_yellow_750.png" srcset="../img/perfume_yellow_250.png 250w, ../img/perfume_yellow_500.png 500w, ../img/perfume_yellow_750.png 750w" sizes="(min-width: 1024px) 50vw,(min-width: 768px) 50vw, 50vw")
+            ul.words__list
+                li.words__word
+                    | Joyeux
+                li.words__word
+                    | Boisé
+                li.words__word
+                    | Sportif
+                li.words__word
+                    | Gentleman
+                li.words__word.words__word--important
+                    | Explosif
+
+        section.smells.smells--optimiste.js-paralax(data-speed='0.9')
+            div.js-toggle-content.fade-in
+                p.smells__txt
+                    | Un parfum dynamisant pour les gentleman-sportif qui contient du pamplemousse associé à un accord tonique et effervescent.
+
+            div.js-toggle-content.fade-out
+                div.smells__infos
+                    span.smells__title
+                        | FAMILLE OLFACTIVE - Hespéridé et Boisé 
+
+                div.smells__infos
+                    span.smells__title
+                        | Note de tête
+                    span.smells__content
+                        | pomelo 
+
+                div.smells__infos
+                    span.smells__title
+                        | Note de coeur
+                    span.smells__content
+                        | pomme 
+
+                div.smells__infos
+                    span.smells__title
+                        | Note de fond
+                    span.smells__content
+                        | cyprès , ambre, vétiver  
+
+            a.js-btn-toggle-content.smells__btn(href="#")
+                | Pyramide Olfactive
+
+        section.quote.quote--up.quote--optimiste.js-paralax(data-speed='1.7')
+            blockquote.quote__txt
+                p
+                    | " L'optimisme d'un polo jaune vif un matin de grand soleil. "
+            span.quote__author
+                | Lacoste
+
+        section.texte.texte--optimiste
+            p.texte__txt
+                | Eau de Lacoste Jaune est un parfum fruité aromatique ; une création vivifiante et optimiste. Aussi, comme le laisse à penser son coloris, la déclinaison jaune de ce parfum sonne comme étant un concentré d'optimisme.
+
+        include ../partials/footerParfum.pug
+        
+include ../partials/footer.pug

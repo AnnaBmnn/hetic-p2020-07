@@ -1,9 +1,9 @@
 {
-  "name": "gulp-test",
+  "name": "Lacoste_L.12.12",
   "version": "1.0.0",
-  "description": "Gulp test",
+  "description": "A school project about Lacoste L.12.12 perfumes",
   "main": "index.js",
-  "author": "bcalou",
+  "author": "hetic-p2020-07",
   "license": "MIT",
   "scripts": {
     "dev": "gulp",
@@ -31,6 +31,13 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "graceful-fs": "^4.1.11",
+    "gulp-babel": "^7.0.0",
     "gulp-if": "^2.0.2",
     "rem-unit-polyfill": "^1.3.4"
   },

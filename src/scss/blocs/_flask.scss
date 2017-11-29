@@ -1,0 +1,45 @@
+.flask {
+    display: flex;
+    order: 0;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    margin: 10vh 0;
+    @include medium {
+        order: 5;
+    }
+    @include large {
+        height: 80vh;
+        margin: 3vh 0;
+    }
+}
+.flask__container {
+    position: relative;
+    width: 40vw;
+
+    @include large {
+        width: 30vw;
+    }
+}
+.flask__packaging {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+.flask__bottle {
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: auto;
+    transform: translateX(-40%) translateY(20%);
+    img {
+        width: 100%;
+        height: auto;		
+    }
+}

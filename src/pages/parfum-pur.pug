@@ -1,0 +1,83 @@
+include ../partials/header.pug
+
+body
+    .container
+        section.titles.titles--pur.js-paralax(data-speed='6')
+            h1.titles__title
+                | Pur
+            span.titles__subtitle
+                | Eau de Parfum - L. 12. 12.
+
+        section.description.description--up.description--pur.js-paralax(data-speed='2')
+            div.description__blockColor.description__blockColor--pur
+            
+            p.description__txt
+                | Une création Blanche à l’esprit crocodile !
+
+            p.description__txt
+                | Carré et épuré, le verre laqué du flacon blanc opaque, couleur iconique de la marque, révèle ici une fragrance douce et pure.
+            div.description__decoration.description__decoration--intense
+                img(src="../img/flower.png" srcset="../img/fleur_300.png 300w, ../img/flower.png 600w" sizes="(min-width: 1024px) 40vw,(min-width: 768px) 50vw, 50vw")
+
+        section.words.words--pur
+            div.words__flacon.js-paralax(data-speed='2.5')
+                img(src="../img/perfume_white_750.png" srcset="../img/perfume_white_250.png 250w, ../img/perfume_white_500.png 500w, ../img/perfume_white_750.png 750w" sizes="(min-width: 1024px) 50vw,(min-width: 768px) 50vw, 50vw")
+            ul.words__list
+                li.words__word
+                    | Simplicité
+                li.words__word
+                    | Masculinité
+                li.words__word
+                    | Séduisant
+                li.words__word.words__word--important
+                    | Edition limitée
+                li.words__word
+                    | Gentleman
+
+
+        section.smells.smells--pur.js-paralax(data-speed='0.9')
+            div.js-toggle-content.fade-in
+                p.smells__txt
+                    | Au nez, c’est un mélange frais et boisé avec une note de cœur florale et masculine. Décontraction et fraîcheur signent cette fragrance masculine, pure et tonique.
+
+            div.js-toggle-content.fade-out
+                div.smells__infos
+                    span.smells__title
+                        | FAMILLE OLFACTIVE - boisé et floral Musc
+
+                div.smells__infos
+                    span.smells__title
+                        | Note de tête
+                    span.smells__content
+                        | romarin, cardamome, pamplemousse
+
+                div.smells__infos
+                    span.smells__title
+                        | Note de coeur
+                    span.smells__content
+                        | tubéreuse, ylang-ylang, cèdre atlas
+
+                div.smells__infos
+                    span.smells__title
+                        | Note de fond
+                    span.smells__content
+                        | vétiver, cèdre atlas, cuir, daim
+
+            a.js-btn-toggle-content.smells__btn(href="#")
+                | Pyramide Olfactive
+
+        section.quote.quote--up.quote--pur.js-paralax(data-speed='1.5')
+            blockquote.quote__txt
+                p
+                    | " Un hommage unique au fondateur de la marque. "
+            span.quote__author
+                | Lacoste
+
+        section.texte.texte--pur
+            p.texte__txt
+                | Une édition limitée d’un parfum boisé floral qui séduira tous les gentlemen sportifs. Des effluves de cuir, de daim suédé et de bois de cèdre sont sublimés par une note de vétiver.
+
+
+        include ../partials/footerParfum.pug
+        
+include ../partials/footer.pug

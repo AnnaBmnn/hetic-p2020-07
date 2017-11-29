@@ -1,29 +1,36 @@
 "use strict";
 
 let OSName="Unknown OS";
-if (navigator.appVersion.indexOf("Win")  !== -1) {
+if (navigator.appVersion.indexOf("Win") !== -1) {
     OSName = "Windows";
-}  else if (navigator.appVersion.indexOf("Mac")  !== -1)
-{
+} else if (navigator.appVersion.indexOf("Mac") !== -1) {
     OSName = "MacOS";
-}  else if (navigator.appVersion.indexOf("X11")  !== -1)
-{
+} else if (navigator.appVersion.indexOf("X11") !== -1) {
     OSName = "UNIX";
-} else if (navigator.appVersion.indexOf("Linux")!== -1)
-{
+}else if (navigator.appVersion.indexOf("Linux") !== -1) {
     OSName = "Linux";
 }
 
-let theDiv      = document.getElementById("wrapper");
-let clientWidth = document.getElementById("body").clientWidth;
+let clientWidth = 0;
+let theDiv = document.getElementById("wrapper");
+
+if (document.getElementById("indexBody") !== null)
+{
+    clientWidth = document.getElementById("indexBody").clientWidth;
+}
+
+let maxTranslate;
+if (theDiv !== null)
+{
+    maxTranslate    = theDiv.scrollWidth - clientWidth;
+}
 
 let translateAllowed    = true;
 let actualPos           = 0;
-let maxTranslate        = theDiv.scrollWidth - clientWidth;
 let xDown               = null;
 let yDown               = null;
+let scrollSpeed         = 70;
 
-let scrollSpeed         = 60;
 if (OSName === "MacOS")
 {
     scrollSpeed = 1;
@@ -31,29 +38,19 @@ if (OSName === "MacOS")
 
 /* EVENT LISTENERS */
 
-document.addEventListener("touchstart", handleTouchStart,   false);
-document.addEventListener("touchmove",  handleTouchMove,    false);
-document.addEventListener("wheel",      handleScroll,       true) ;
-document.addEventListener("resize",     handleResize,       true) ;
-
-/* MOUVEMENTS */
-
 function goToLeft(varTrans, smooth = false) {
-    if (typeof varTrans !== "undefined")
-    {
-        actualPos += varTrans;
+    if (typeof varTrans !== "undefined") {
+        actualPos += Math.min(varTrans, 200);
     } else {
-        actualPos += document.getElementById("body").clientWidth;
+        actualPos += document.getElementById("indexBody").clientWidth;
     }
-    if ( actualPos < 0)
-    {
+    if ( actualPos < 0) {
         actualPos = 0;
-    } else if (actualPos > maxTranslate )
-    {
+    } else if (actualPos > maxTranslate ) {
         actualPos = maxTranslate;
     }
-    if (smooth)
-    {
+
+    if (smooth === true) {
         theDiv.style.transition = "all 0.3s ease";
     } else {
         theDiv.style.transition = "";
@@ -62,26 +59,25 @@ function goToLeft(varTrans, smooth = false) {
 }
 
 function goToRight(varTrans, smooth = false) {
-    if (typeof varTrans !== "undefined")
-    {
-        actualPos += varTrans;
+    if (typeof varTrans !== "undefined") {
+        actualPos += Math.max(varTrans, -200);
     } else {
-        actualPos -= document.getElementById("body").clientWidth;
+        actualPos -= document.getElementById("indexBody").clientWidth;
     }
-    if ( actualPos < 0)
-    {
+
+    if ( actualPos < 0) {
         actualPos = 0;
-    } else if (actualPos > maxTranslate )
-    {
+    } else if (actualPos > maxTranslate ) {
         actualPos = maxTranslate;
     }
-    if (smooth)
-    {
+
+    if (smooth === true) {
         theDiv.style.transition = "all 0.3s ease";
     } else {
         theDiv.style.transition = "";
     }
     theDiv.style.transform  = "translateX(-" + actualPos + "px)";
+    console.log();
 }
 
 /* HANDLE SCROLL */
@@ -159,7 +155,7 @@ async function handleTouchMove(e) {
 
 async function handleResize() {
     await sleep(500);
-    maxTranslate = document.getElementById("wrapper").scrollWidth - document.getElementById("body").clientWidth;
+    maxTranslate = document.getElementById("wrapper").scrollWidth - document.getElementById("indexBody").clientWidth;
     if ( actualPos < 0)
     {
         actualPos = 0;
@@ -174,4 +170,12 @@ async function handleResize() {
 /* SLEEP */
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+/* EVENT LISTENERS */
+if (theDiv !== null ) {
+    document.addEventListener("touchstart", handleTouchStart,   false);
+    document.addEventListener("touchmove",  handleTouchMove,    false);
+    document.addEventListener("wheel",      handleScroll,       true) ;
+    document.addEventListener("resize",     handleResize,       true) ;
 }

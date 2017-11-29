@@ -1,0 +1,89 @@
+.texte {
+    z-index: 20;
+    align-self: flex-start;      
+    width: 70%;
+    margin-top: 60px;
+    padding: 40px 40px 80px;
+    background-color: $white;
+
+    @include medium {
+        order: 6;
+        width: 50%;
+        padding: 60px 40px;
+    }
+    @include large {
+        padding: 80px 40px;
+    }
+}
+
+.texte--optimiste {
+    background-color: $yellow;
+    color: $white;
+}
+
+.texte--energique {
+    align-self: center;      
+    width: 100%;
+    background-color: $red;
+    color: $white;
+    @include medium {
+        align-self: flex-start;
+        width: 50%
+    }
+}
+
+.texte--pur {
+    position: relative;
+    margin-top: 5vw;
+    background-color: $white;
+    box-shadow: $boxShadow;
+    color: $black;
+    @include medium {
+        align-self: flex-end;
+    }
+    &:after {
+        content: url('../img/balleBlanche_240.png');
+        position: absolute;
+        bottom: 85%;
+        left: 60%;
+        display: block;
+        height: auto;
+        width: 100%;
+        transform: scale(0.7) rotateZ(90deg);
+        @include medium {
+            left: -55%;
+            bottom: 60%;
+        }
+        @include large {
+            left: -55%;
+            bottom: 40%;
+            transform: scale(0.7) rotateZ(90deg);
+        }
+    }
+}
+
+.texte--intense {
+    background-color: $black;
+    color: $white;
+}
+
+.texte__txt {
+    display: inline-block;
+    margin-bottom: 20px;
+    line-height: 1.25;
+    @include font-settings($roboto, 16px, 500); 
+    &:last-child {
+        margin-bottom: 0;
+    }
+    @include medium {
+        font-size: 20px;
+    }    
+}
+
+.texte__txt--energique {
+    width: 100%;
+    margin: 0 auto;
+    @include medium {
+        width: auto;
+    }
+}

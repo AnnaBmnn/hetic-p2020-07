@@ -1,3 +1,5 @@
+let sourcemaps = require("gulp-sourcemaps");
+let babel = require("gulp-babel");
 let babelify = require("babelify");
 let browserify = require("browserify");
 let buffer = require("vinyl-buffer");
@@ -10,19 +12,21 @@ let minifyCSS = require("gulp-csso");
 let pug = require("gulp-pug");
 let sass = require("gulp-sass");
 let source = require("vinyl-source-stream");
-let sourcemaps = require("gulp-sourcemaps");
 let sync = require("browser-sync").create();
 let uglify = require("gulp-uglify");
 let postcss = require("gulp-postcss");
 let autoprefixer = require("autoprefixer");
 let pxtorem = require("postcss-pxtorem");
+let mergeStream = require("merge-stream");
+require("babel-polyfill");
+
 let options = {
     propList: ["*"],
-    fallback: true,
+    fallback: true
 };
 let processors = [autoprefixer, pxtorem(options)];
-let isProd = process.env.NODE_ENV === "production";
-
+//let isProd = process.env.NODE_ENV === "production";
+let isProd = true;
 
 /**
  * PUG
@@ -55,15 +59,15 @@ function scss() {
  */
 
 function js() {
-  return browserify({entries: ["src/js/script.js", "src/js/scroll.js"], debug: true})
-    .transform(babelify, {presets: "es2015"})
-    .bundle()
-    .pipe(source("script.js"))
-    .pipe(buffer())
-    .pipe(gulpif(!isProd, sourcemaps.init({loadMaps: true})))
-    .pipe(gulpif(!isProd, sourcemaps.write(".")))
-    .pipe(gulp.dest("dist/js"))
-    .pipe(sync.stream());
+    return browserify({entries: ["src/js/script.js", "src/js/scroll.js", "src/js/animation.js", "src/js/toggleContent.js"], debug: true})
+        .transform(babelify)
+        .bundle()
+        .pipe(source("script.js"))
+        .pipe(buffer())
+        .pipe(gulpif(!isProd, sourcemaps.init({loadMaps: true})))
+        .pipe(gulpif(!isProd, sourcemaps.write(".")))
+        .pipe(gulp.dest("dist/js"))
+        .pipe(sync.stream());
 }
 
 /**

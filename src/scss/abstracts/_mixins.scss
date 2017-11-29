@@ -1,5 +1,63 @@
-@mixin pseudo($display: block, $pos: absolute, $content: ''){
-    content: $content;
-    display: $display;
-    position: $pos;
+@mixin mandarine($left) {
+    position: absolute;
+    top: -60px;
+    left: $left;
+    transform-origin: center;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    width: 60px;
+}
+@mixin image-container() {
+    display: flex;
+    position: relative;
+    width: 800px;
+    height: 800px;
+    max-width: 40vh;
+    max-height: 40vh;
+    background-color: $white;
+    box-shadow: 4px 4px 14px -4px rgba(0,0,0,0.75);
+
+    margin-top: 15vh;
+    margin-left: 10vw;
+
+}
+
+@mixin image-handler() {
+    position: absolute;
+    height: 50vh;
+    max-width: 600px;
+
+    top: -15vh;
+    left: calc(-50px - 8vw);
+}
+
+@mixin discover-button($color)
+{
+    align-self: flex-end;
+    justify-self: right;
+    font-family: Roboto, "sans-serif";
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: $color;
+
+    margin: auto 10px 10px auto;
+
+    @media screen and (min-width: 450px){
+        font-size: 1.5rem;
+    }
+}
+
+@mixin font-settings ($font-family: $roboto, $font-size: 20px, $font-weight: 500) {
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+}
+
+@mixin parfum-title($color) {
+    font-size: 7vh;
+    color: $color;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin: 10px 10px 10px -5vw;
 }

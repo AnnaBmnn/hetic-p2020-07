@@ -1,0 +1,108 @@
+.quote {
+    align-self: flex-start;
+    width: 85%;
+    position: relative;
+    padding: 60px 40px;
+    background-color: $white;
+    box-shadow: $boxShadow;
+    @include medium {
+        order: 4;
+        width: 45%;
+    }
+    @include large {
+        width: 45%;
+    }
+}
+
+.quote--up {
+    z-index: 20;
+    will-change: transform;
+    transform: translate3d(0, -40px, 0);
+    @include medium {
+        transform: none;
+    }
+}
+
+.quote--optimiste {
+    &:after {
+        content: url('../../img/polo.png');
+        position: absolute;
+        top: 100%;
+        left: 100%;
+        display: block;
+        height: auto;
+        width: 100%;
+        transform: translate3d(-50%, -50%, 0);
+        @include large {
+            transform: translate3d(-25%, -50%, 0);
+
+        }
+    }
+}
+.quote--energique {
+    margin-top: 30vw;
+    @include medium {
+        margin-top: 20vw;
+    }
+    &:before {
+        content: url('../img/croco_seeds_400.png');
+        position: absolute;
+        top: -100%;
+        left: -20%;
+        display: block;
+        height: auto;
+        width: 70%;
+        max-width: 400px;
+        transform: scale(0.6);
+    }    
+}
+.quote--puissant {
+    margin-top: 30vw;
+
+    @include medium {
+        margin-top: 10vh;
+    }
+    &:before {
+        content: url('../img/blueberry_440.png');
+        position: absolute;
+        top: -90%;
+        left: -60%;
+        z-index: -10;
+        display: block;
+        height: auto;
+        max-width: 440px;
+        transform: scale(0.5);
+    }    
+}
+.quote--intense {
+    &:after {
+        content: url('../img/chocolate_300.png');
+        position: absolute;
+        top: 100%;
+        left: 60%;
+        display: block;
+        height: auto;
+        width: 70%;
+        transform: translate3d(0%, -50%, 0);
+        @include medium {
+            left: -40%;
+        }
+        @include large {
+            left: -40%;
+        }
+    }
+}
+.quote--pur {
+    background-color: $green;
+    color: $white;
+}
+
+.quote__txt {
+    margin-bottom: 20px;
+    line-height: 1.25;  
+    @include font-settings($roboto, 28px, 500);	
+}
+
+.quote__author {
+    @include font-settings($roboto, 14px, 100); 
+}

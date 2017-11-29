@@ -1,0 +1,170 @@
+.description {
+    align-self: center;
+    position: relative;   
+    width: 70%;
+    padding: 40px 20px ;
+    background-color: $white;
+    box-shadow: $boxShadow;
+
+    @include medium {
+        align-self: flex-end;
+        order: 2;
+        width: 50%;
+        margin-right: 40px;
+        padding: 40px 40px;
+        background-color: none;
+        box-shadow: none;
+    }
+
+    @include large {
+        width: 40%;
+        margin-right: 60px;
+        padding: 40px 60px;
+    }
+}
+
+.description--up {
+    transform: translate3d(0, -40px, 0);
+
+    @include medium {
+        transform: none;
+    }
+}
+
+.description--pur {
+    background-color: $green;
+    color: $white;
+}
+
+.description__blockColor {
+    @include medium {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            z-index: 20;
+            width: 100%;
+            height: 100%;
+            background-color: $white;
+            box-shadow: $boxShadow;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            z-index: 10;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.description__blockColor--optimiste {
+    @include medium {
+        &:after {
+            background-color: $yellow;
+        }
+    }    
+}
+
+.description__blockColor--puissant {
+    @include medium {
+        &:after {
+            background-color: $blue;
+        }
+    }    
+}
+
+.description__blockColor--energique {
+    @include medium {
+        &:after {
+            background-color: $red;
+        }
+    }    
+}
+
+.description__blockColor--pur {
+    @include medium {
+        &:after {
+            background-color: $white;
+            box-shadow: $boxShadow;
+        }
+        &:before {
+            background-color: $green;
+        }
+    }    
+}
+
+.description__blockColor--intense {
+    @include medium {
+        &:after {
+            background-color: $black;
+        }
+    }    
+}
+.description__decoration {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 50vw;
+    height: auto;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+.description__decoration--intense {
+    transform: translateX(35%) translateY(-20%);
+    @include medium {
+        max-width: 300px;
+        width: 30vw;
+        z-index: 20;
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+.description__decoration--energique {
+    top: -5%;
+    left: 90%;
+    transform-origin: 100% 100%;
+    animation: rotateFern 3s alternate-reverse ease-in-out infinite;
+
+    @include medium {
+        left: 95%;
+        top: 25%;
+        max-width: 300px;
+        width: 30vw;
+        z-index: 20;
+    }
+    @include large {
+        top: 0%;
+        left: 110%;
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+.description__txt {
+    position: relative;
+    z-index: 20;
+    display: inline-block;
+    margin-bottom: 20px;
+    line-height: 1.25;
+    @include font-settings($roboto, 16px, 100); 
+
+    &:last-child {
+        margin-bottom: 0;
+    }    
+}
