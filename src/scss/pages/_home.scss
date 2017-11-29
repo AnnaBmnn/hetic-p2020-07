@@ -1,16 +1,10 @@
-@import 'home/home__first';
-@import 'home/home__blue';
-@import 'home/home__black';
-@import 'home/home__red';
-@import 'home/home__yellow';
-@import 'home/home__white';
-@import 'home/home__last';
-
 body#indexBody {
     margin: 0;
     overflow-y: hidden;
 }
-
+.home__first {
+    height: 100vh;
+}
 .home__container {
     overflow-y: hidden;
     overflow-x: hidden;
@@ -42,23 +36,6 @@ body#indexBody {
 }
 
 /**
- * TOPBAR NAV
- */
-.brand-name {
-    z-index: 1000;
-    position: fixed;
-    text-decoration: none;
-    font-size: 1.5rem;
-    img {
-        position: fixed;
-        top: 10px;
-        left: 10px;
-        height: 2rem;
-        transform: translate3d(0, 0, 0);
-    }
-}
-
-/**
  * INSTRUCTIONS
  */
 .home__instruction {
@@ -74,6 +51,6 @@ body#indexBody {
     color: #CFCFCF;
 }
 
-.instructions__text {
+.home__instructionsText {
     margin: 1rem;
 }

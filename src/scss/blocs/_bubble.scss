@@ -83,49 +83,6 @@ BULLES
 
 }
 
-/****************************************
-PARFUM & NAME BLUE
-*******************************************/
-
-.presentation-parfum-blue__container {
-    position: relative;
-    height: 100%;
-    width: 100%;
-}
-
-.parfum-blue__container {
-    position: relative;
-    height: 100vh;
-    overflow-y: hidden;
-    z-index: 3;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    text-align: center;
-    background-color: transparent;
-}
-
-.parfum-blue__name {
-    font-size: 7vh;
-    color: $blue;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    margin: 10px;
-}
-
-.parfum-blue__image-container {
-    @include image-container();
-}
-.parfum-blue__image {
-    @include image-handler();
-}
-
-.discover__blue {
-    @include discover-button($blue)
-}
 
 
 
