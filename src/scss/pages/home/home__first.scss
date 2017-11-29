@@ -1,3 +1,7 @@
+.home__first {
+    height: 100vh;
+}
+
 .first__container {
     background-color: transparent;
     display: flex;
@@ -59,28 +63,28 @@ SQUARES
     transform: translate3d(0, 0, 0);
     -webkit-transform: translate3d(0, 0, 0);
 }
-.first__squares--1 {
+.squares__1 {
     @extend .square;
     background-color: $yellow;
     top: 90px;
     left: calc(20vw - 180px);
 }
 
-.first__squares--2 {
+.squares__2 {
     @extend .square;
     background-color: $black;
     top: 280px;
     right: calc(120px + 70vw);
 }
 
-.first__squares--3 {
+.squares__3 {
     @extend .square;
     background-color: $blue;
     top: calc(60vh + 180px);
     right: calc(30vw - 100px);
 }
 
-.first__squares--4 {
+.squares__4 {
     @extend .square;
     background-color: $red;
     top: 60vh;
