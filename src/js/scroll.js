@@ -14,15 +14,13 @@ if (navigator.appVersion.indexOf("Win") !== -1) {
 let clientWidth = 0;
 let theDiv = document.getElementById("wrapper");
 
-if (document.getElementById("indexBody") !== null)
-{
+if (document.getElementById("indexBody") !== null) {
     clientWidth = document.getElementById("indexBody").clientWidth;
 }
 
 let maxTranslate;
-if (theDiv !== null)
-{
-    maxTranslate    = theDiv.scrollWidth - clientWidth;
+if (theDiv !== null) {
+    maxTranslate = theDiv.scrollWidth - clientWidth;
 }
 
 let translateAllowed    = true;
@@ -31,8 +29,7 @@ let xDown               = null;
 let yDown               = null;
 let scrollSpeed         = 70;
 
-if (OSName === "MacOS")
-{
+if (OSName === "MacOS") {
     scrollSpeed = 1;
 }
 

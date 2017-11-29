@@ -13,10 +13,10 @@ class Paralax {
     //animate(scrollY): scrollY is the window.scrollY
     //this method create the paralax effect
     animate(scrollY){
-            //distScrollY is the amount of pixel the div has to move
-            //we have to do scrollY-thi.position so that the div donc move to much
-            let distScrollY = (scrollY-this.position)*this.speed
-            this.div.style.transform = `translate3D(0, ${distScrollY}px, 0)`            
+        //distScrollY is the amount of pixel the div has to move
+        //we have to do scrollY-thi.position so that the div donc move to much
+        let distScrollY = (scrollY-this.position)*this.speed
+        this.div.style.transform = `translate3D(0, ${distScrollY}px, 0)`            
     }
 }
 //initialisation of the paralax object for each div with the class

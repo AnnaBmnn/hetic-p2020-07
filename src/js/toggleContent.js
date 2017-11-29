@@ -9,15 +9,11 @@ if(btnToggleContent){
             if(!content.classList.contains('fade-out')){
                     content.classList.add('fade-out')
                     content.classList.remove('fade-in')
-
             } else {
                 content.classList.remove('fade-out')
-                content.classList.add('fade-in')
-                    
+                content.classList.add('fade-in') 
             }
         })
         smell.classList.toggle('smells--bigger')
-    })    
+    })
 }
-
-
