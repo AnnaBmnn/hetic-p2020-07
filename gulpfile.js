@@ -33,7 +33,7 @@ let isProd = true;
  */
 
 function templates() {
-  return gulp.src("src/views/**/*.pug")
+  return gulp.src("src/views/pages/*.pug")
     .pipe(pug())
     .pipe(gulp.dest("dist/"))
     .pipe(sync.stream());
