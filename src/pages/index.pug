@@ -1,3 +1,4 @@
+-var home = true;
 include ../partials/header.pug
 body#indexBody
     .home__container
@@ -13,10 +14,10 @@ body#indexBody
             #wrapper.home__box.home__wrapper
                 .home__first
                     .first__squares
-                        .squares__1
-                        .squares__2
-                        .squares__3
-                        .squares__4
+                        .first__squares--1
+                        .first__squares--2
+                        .first__squares--3
+                        .first__squares--4
                     .first__container
                         h1 Eau de Parfum L.12. 12
                         p
@@ -25,17 +26,17 @@ body#indexBody
                         p
                             | La maison Lacoste a ici tenté de restituer une certaine idée de cette fragrance se veut à l’image du polo blanc créé par René Lacoste :
                             | une élégance audacieuse et sportive.
-                .presentation-parfum-yellow__container#yellow
-                    canvas.parfum-yellow__canvas
-                    .parfum-yellow__container
-                        p.parfum-yellow__name
+                .perfume__containerPresentation#yellow
+                    canvas.perfume__canvas
+                    .perfume__container
+                        p.perfume__name.perfume__name--optimiste
                             | Optimiste
-                        .parfum-yellow__image-container
-                            img(src="./img/perfume_yellow.png", alt="Parfum Jaune").parfum-yellow__image
-                            a.discover__yellow(href="./parfum-optimiste.html")
+                        .perfume__imageContainer
+                            img(src="./img/perfume_yellow.png", alt="Parfum Jaune").perfume__image
+                            a.perfume__discover--optimiste(href="./parfum-optimiste.html")
                                 | Découvrir
 
-                .presentation-parfum-blue__container#blue
+                .perfume__containerPresentation#blue
                     .bubbles
                         - var i = 0
                         while i < 2
@@ -43,66 +44,66 @@ body#indexBody
                                 .bubble
                                     img(src="../img/bubble.png", alt="", class="bubble__size" + val)
                             - i++
-                    .parfum-blue__container
-                        p.parfum-blue__name
+                    .perfume__container
+                        p.perfume__name.perfume__name--puissant
                             | Puissant
-                        .parfum-blue__image-container
-                            img(src="../img/perfume_blue.png", alt="Parfum Bleu").parfum-blue__image
-                            a.discover__blue(href="./parfum-puissant.html")
+                        .perfume__imageContainer
+                            img(src="../img/perfume_blue.png", alt="Parfum Bleu").perfume__image
+                            a.perfume__discover--puissant(href="./parfum-puissant.html")
                                 | Découvrir
 
-                .presentation-parfum-red__container
-                    .parfum-red__mandarines
+                .perfume__containerPresentation
+                    .perfume__containerAnimation
                         - var i = 1
                         each val in [1, 2, 1, 1, 2, 2, 1, 2]
                             img(src="./img/mandarine.png", alt="", class="mandarine-" + i )
                             - i++
-                    .parfum-red__container
-                        p.parfum-red__name
+                    .perfume__container
+                        p.perfume__name.perfume__name--energique
                             | Energique
-                        .parfum-red__image-container
-                            img(src="../img/perfume_red.png", alt="Parfum Rouge").parfum-red__image
-                            a.discover__red(href="./parfum-energique.html")
+                        .perfume__imageContainer 
+                            img(src="../img/perfume_red.png", alt="Parfum Rouge").perfume__image
+                            a.perfume__discover--energique(href="./parfum-energique.html")
                                 | Découvrir
 
-                .presentation-parfum-white__container
-                    .parfum-white__flowers
+                .perfume__containerPresentation
+                    .perfume__containerAnimation
                         - var i = 1
                         while i <= 7
                             img(src="../img/flower.png", alt="", class="flower-" + i)
                             - i++
-                    .parfum-white__container
-                        p.parfum-white__name
+                    .perfume__container
+                        p.perfume__name.perfume__name--pur
                             | Pur
-                        .parfum-white__image-container
-                            img(src="../img/perfume_white.png", alt="Parfum Blanc").parfum-white__image
-                            a.discover__white(href="./parfum-pur.html")
+                        .perfume__imageContainer
+                            img(src="../img/perfume_white.png", alt="Parfum Blanc").perfume__image
+                            a.perfume__discover--pur(href="./parfum-pur.html")
                                 | Découvrir
 
-                .presentation-parfum-black__container
-                    .parfum-black__chocolates
+                .perfume__containerPresentation
+                    .perfume__containerAnimation.perfume__containerAnimation--intense
                         - var i = 1
                         each val in [1, 2, 1, 1, 2, 2, 1, 2]
                             img(src="../img/chocolate_" + val + ".png", alt="", class="chocolat-" + i )
                             - i++
-                    .parfum-black__container
-                        p.parfum-black__name
+                    .perfume__container
+                        p.perfume__name.perfume__name--intense
                             | Intense
-                        .parfum-black__image-container
-                            img(src="../img/perfume_black.png", alt="Parfum Noir").parfum-black__image
-                            a.discover__black(href="./parfum-intense.html")
+                        .perfume__imageContainer
+                            img(src="../img/perfume_black.png", alt="Parfum Noir").perfume__image
+                            a.perfume__discover--intense(href="./parfum-intense.html")
                                 | Découvrir
 
                 .presentation-menu__container
                     ul.menu__container
                         li
-                            a.yellow(href="./parfum-optimiste.html") Optimiste
+                            a.menu__containerItem--optimiste(href="./parfum-optimiste.html") Optimiste
                         li
-                            a.blue(href="./parfum-puissant.html")    Puissant
+                            a.menu__containerItem--puissant(href="./parfum-puissant.html")    Puissant
                         li
-                            a.red(href="./parfum-energique.html")    Energique
+                            a.menu__containerItem--energique(href="./parfum-energique.html")    Energique
                         li
-                            a.green(href="./parfum-pur.html")        Pur
+                            a.menu__containerItem--pur(href="./parfum-pur.html")        Pur
                         li
-                            a.black(href="./parfum-intense.html")    Intense
+                            a.menu__containerItem--optimiste--intense(href="./parfum-intense.html")    Intense
             include ../partials/footer.pug
